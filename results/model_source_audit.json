@@ -1,0 +1,147 @@
+{
+  "audit_scope": {
+    "propagation_reference": "Yoo et al., IEEE TWC 2018",
+    "sequential_protocol_reference": "Dinis and Wichman, IEEE Communications Letters 2026",
+    "common_scatterer_status": "Yoo geometry with a local receive-port extension",
+    "independence_status": "matched-marginal AoD/AoA-independence ablation",
+    "separable_status": "matched-marginal space-time-separable ablation",
+    "sample_scope": "the four six-port propagation and FAS-orientation cases used in the paper"
+  },
+  "isotropic_jakes_check": {
+    "spatial_j0_max_error": 3.6128596783451113e-16,
+    "temporal_j0_max_error": 3.6128596783451113e-16
+  },
+  "composite_quadrature_convergence_check": {
+    "case": "yoo_fig8_same_direction_longitudinal_K6",
+    "panel20m_vs_panel5m_max_error": 5.751007772357025e-06,
+    "panel10m_vs_panel5m_max_error": 1.5519494667709572e-07,
+    "unsplit_order48_vs_panel5m_max_error": 0.005104513822925668,
+    "unsplit_order128_vs_panel5m_max_error": 0.00010190464630274146
+  },
+  "cases": [
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_angle_deg": 0.0,
+      "observed_ports": 6,
+      "scan_duration_s": 0.0005,
+      "covariance_checks": {
+        "common_scatterer": {
+          "hermitian_residual": 0.0,
+          "unit_diagonal_residual": 1.1102230246251565e-14,
+          "minimum_eigenvalue": -1.961802421245343e-17
+        },
+        "independent_AoD_AoA": {
+          "hermitian_residual": 0.0,
+          "unit_diagonal_residual": 2.220446049250313e-14,
+          "minimum_eigenvalue": 7.372574772896741e-17
+        },
+        "fully_separable": {
+          "hermitian_residual": 0.0,
+          "unit_diagonal_residual": 0.0,
+          "minimum_eigenvalue": -9.367506770275465e-17
+        }
+      },
+      "local_plane_wave_vs_finite_path_max_error": 0.00018142655923990346,
+      "production_order48_vs_order128_max_error": 0.005076881259268426,
+      "intermediate_order72_vs_order128_max_error": 0.001911777924729503,
+      "los_local_linearization_max_error": 5.6618419298427175e-12,
+      "zero_time_common_vs_independent_max_error": 1.1102230246251565e-14,
+      "zero_time_common_vs_separable_max_error": 1.1102230246251565e-14,
+      "zero_displacement_common_vs_separable_max_error": 1.1102230246251565e-14,
+      "stationary_tx_common_vs_independent_max_error": 5.10702591327572e-15
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_angle_deg": 90.0,
+      "observed_ports": 6,
+      "scan_duration_s": 0.0005,
+      "covariance_checks": {
+        "common_scatterer": {
+          "hermitian_residual": 0.0,
+          "unit_diagonal_residual": 1.1102230246251565e-14,
+          "minimum_eigenvalue": 6.375108774214545e-17
+        },
+        "independent_AoD_AoA": {
+          "hermitian_residual": 0.0,
+          "unit_diagonal_residual": 2.220446049250313e-14,
+          "minimum_eigenvalue": 2.8622937353611666e-17
+        },
+        "fully_separable": {
+          "hermitian_residual": 0.0,
+          "unit_diagonal_residual": 0.0,
+          "minimum_eigenvalue": -1.3877787807814607e-16
+        }
+      },
+      "local_plane_wave_vs_finite_path_max_error": 0.00021077535231238867,
+      "production_order48_vs_order128_max_error": 0.00044771555651171963,
+      "intermediate_order72_vs_order128_max_error": 3.891799207915776e-05,
+      "los_local_linearization_max_error": 0.00031046939050852033,
+      "zero_time_common_vs_independent_max_error": 1.1102230246251565e-14,
+      "zero_time_common_vs_separable_max_error": 1.1102230246251565e-14,
+      "zero_displacement_common_vs_separable_max_error": 1.1102230246251565e-14,
+      "stationary_tx_common_vs_independent_max_error": 5.10702591327572e-15
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_angle_deg": 0.0,
+      "observed_ports": 6,
+      "scan_duration_s": 0.0005,
+      "covariance_checks": {
+        "common_scatterer": {
+          "hermitian_residual": 0.0,
+          "unit_diagonal_residual": 1.887379141862766e-15,
+          "minimum_eigenvalue": 5.730392231821337e-17
+        },
+        "independent_AoD_AoA": {
+          "hermitian_residual": 0.0,
+          "unit_diagonal_residual": 3.774758283725532e-15,
+          "minimum_eigenvalue": -7.701901182813283e-17
+        },
+        "fully_separable": {
+          "hermitian_residual": 0.0,
+          "unit_diagonal_residual": 4.440892098500626e-16,
+          "minimum_eigenvalue": -1.3213713977336251e-18
+        }
+      },
+      "local_plane_wave_vs_finite_path_max_error": 0.0007253558604260352,
+      "production_order48_vs_order128_max_error": 7.835961140191473e-05,
+      "intermediate_order72_vs_order128_max_error": 1.2199033957023304e-07,
+      "los_local_linearization_max_error": null,
+      "zero_time_common_vs_independent_max_error": 1.887379141862766e-15,
+      "zero_time_common_vs_separable_max_error": 5.959374814064025e-15,
+      "zero_displacement_common_vs_separable_max_error": 9.444729326359476e-15,
+      "stationary_tx_common_vs_independent_max_error": 6.251369632372151e-15
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_angle_deg": 90.0,
+      "observed_ports": 6,
+      "scan_duration_s": 0.0005,
+      "covariance_checks": {
+        "common_scatterer": {
+          "hermitian_residual": 0.0,
+          "unit_diagonal_residual": 1.887379141862766e-15,
+          "minimum_eigenvalue": 8.432382396491344e-17
+        },
+        "independent_AoD_AoA": {
+          "hermitian_residual": 0.0,
+          "unit_diagonal_residual": 3.774758283725532e-15,
+          "minimum_eigenvalue": 1.600282406587345e-16
+        },
+        "fully_separable": {
+          "hermitian_residual": 0.0,
+          "unit_diagonal_residual": 4.440892098500626e-16,
+          "minimum_eigenvalue": -1.7423128911843336e-16
+        }
+      },
+      "local_plane_wave_vs_finite_path_max_error": 0.0009473591469034775,
+      "production_order48_vs_order128_max_error": 1.8529428213691103e-07,
+      "intermediate_order72_vs_order128_max_error": 5.854145094038787e-11,
+      "los_local_linearization_max_error": null,
+      "zero_time_common_vs_independent_max_error": 1.887379141862766e-15,
+      "zero_time_common_vs_separable_max_error": 4.2410664857581844e-15,
+      "zero_displacement_common_vs_separable_max_error": 9.444729326359476e-15,
+      "stationary_tx_common_vs_independent_max_error": 6.251369632372151e-15
+    }
+  ]
+}

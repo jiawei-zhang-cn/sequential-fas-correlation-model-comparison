@@ -1,0 +1,392 @@
+{
+  "sample_count_per_point": 2000000,
+  "reported_max_abs_difference": 0.000342,
+  "panel_a": [
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "longitudinal",
+      "model": "common_scatterer",
+      "switch_delay_us": 0.0,
+      "direct_data_time_outage": 0.0495545,
+      "conditional_outage": 0.04957982569802959,
+      "absolute_difference": 2.5325698029592114e-05
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "longitudinal",
+      "model": "independent_AoD_AoA",
+      "switch_delay_us": 0.0,
+      "direct_data_time_outage": 0.049751,
+      "conditional_outage": 0.04958938073099944,
+      "absolute_difference": 0.00016161926900055967
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "longitudinal",
+      "model": "fully_separable",
+      "switch_delay_us": 0.0,
+      "direct_data_time_outage": 0.0493435,
+      "conditional_outage": 0.04959026263738767,
+      "absolute_difference": 0.00024676263738767495
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "longitudinal",
+      "model": "common_scatterer",
+      "switch_delay_us": 50.0,
+      "direct_data_time_outage": 0.0834355,
+      "conditional_outage": 0.08332625160370945,
+      "absolute_difference": 0.00010924839629054828
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "longitudinal",
+      "model": "independent_AoD_AoA",
+      "switch_delay_us": 50.0,
+      "direct_data_time_outage": 0.0783485,
+      "conditional_outage": 0.0781910501105776,
+      "absolute_difference": 0.0001574498894224008
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "longitudinal",
+      "model": "fully_separable",
+      "switch_delay_us": 50.0,
+      "direct_data_time_outage": 0.0795225,
+      "conditional_outage": 0.07929997694304865,
+      "absolute_difference": 0.00022252305695134866
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "longitudinal",
+      "model": "common_scatterer",
+      "switch_delay_us": 100.0,
+      "direct_data_time_outage": 0.1445235,
+      "conditional_outage": 0.14458595829653753,
+      "absolute_difference": 6.245829653753199e-05
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "longitudinal",
+      "model": "independent_AoD_AoA",
+      "switch_delay_us": 100.0,
+      "direct_data_time_outage": 0.1307725,
+      "conditional_outage": 0.13095843133976082,
+      "absolute_difference": 0.00018593133976080312
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "longitudinal",
+      "model": "fully_separable",
+      "switch_delay_us": 100.0,
+      "direct_data_time_outage": 0.1198825,
+      "conditional_outage": 0.11955955991278511,
+      "absolute_difference": 0.00032294008721489575
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "transverse",
+      "model": "common_scatterer",
+      "switch_delay_us": 0.0,
+      "direct_data_time_outage": 0.0085995,
+      "conditional_outage": 0.008604567835601944,
+      "absolute_difference": 5.067835601944501e-06
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "transverse",
+      "model": "independent_AoD_AoA",
+      "switch_delay_us": 0.0,
+      "direct_data_time_outage": 0.0085725,
+      "conditional_outage": 0.008534819229113168,
+      "absolute_difference": 3.7680770886831805e-05
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "transverse",
+      "model": "fully_separable",
+      "switch_delay_us": 0.0,
+      "direct_data_time_outage": 0.0086,
+      "conditional_outage": 0.008616040130476664,
+      "absolute_difference": 1.6040130476664347e-05
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "transverse",
+      "model": "common_scatterer",
+      "switch_delay_us": 50.0,
+      "direct_data_time_outage": 0.0253155,
+      "conditional_outage": 0.02528216984183584,
+      "absolute_difference": 3.3330158164160406e-05
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "transverse",
+      "model": "independent_AoD_AoA",
+      "switch_delay_us": 50.0,
+      "direct_data_time_outage": 0.022969,
+      "conditional_outage": 0.023006874054301667,
+      "absolute_difference": 3.787405430166757e-05
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "transverse",
+      "model": "fully_separable",
+      "switch_delay_us": 50.0,
+      "direct_data_time_outage": 0.027388,
+      "conditional_outage": 0.027235184943700724,
+      "absolute_difference": 0.00015281505629927486
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "transverse",
+      "model": "common_scatterer",
+      "switch_delay_us": 100.0,
+      "direct_data_time_outage": 0.0657425,
+      "conditional_outage": 0.06578520648803082,
+      "absolute_difference": 4.270648803082755e-05
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "transverse",
+      "model": "independent_AoD_AoA",
+      "switch_delay_us": 100.0,
+      "direct_data_time_outage": 0.0592615,
+      "conditional_outage": 0.05903225312499799,
+      "absolute_difference": 0.00022924687500201074
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "transverse",
+      "model": "fully_separable",
+      "switch_delay_us": 100.0,
+      "direct_data_time_outage": 0.0671375,
+      "conditional_outage": 0.06729431960228734,
+      "absolute_difference": 0.0001568196022873336
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "longitudinal",
+      "model": "common_scatterer",
+      "switch_delay_us": 0.0,
+      "direct_data_time_outage": 0.0569165,
+      "conditional_outage": 0.05697399960365295,
+      "absolute_difference": 5.7499603652949594e-05
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "longitudinal",
+      "model": "independent_AoD_AoA",
+      "switch_delay_us": 0.0,
+      "direct_data_time_outage": 0.05695,
+      "conditional_outage": 0.0568127466103499,
+      "absolute_difference": 0.00013725338965010075
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "longitudinal",
+      "model": "fully_separable",
+      "switch_delay_us": 0.0,
+      "direct_data_time_outage": 0.057075,
+      "conditional_outage": 0.05691465672941517,
+      "absolute_difference": 0.0001603432705848326
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "longitudinal",
+      "model": "common_scatterer",
+      "switch_delay_us": 50.0,
+      "direct_data_time_outage": 0.0606175,
+      "conditional_outage": 0.060550374486970523,
+      "absolute_difference": 6.712551302947428e-05
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "longitudinal",
+      "model": "independent_AoD_AoA",
+      "switch_delay_us": 50.0,
+      "direct_data_time_outage": 0.062302,
+      "conditional_outage": 0.06229698628052632,
+      "absolute_difference": 5.013719473680178e-06
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "longitudinal",
+      "model": "fully_separable",
+      "switch_delay_us": 50.0,
+      "direct_data_time_outage": 0.060342,
+      "conditional_outage": 0.060616905063996876,
+      "absolute_difference": 0.00027490506399687614
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "longitudinal",
+      "model": "common_scatterer",
+      "switch_delay_us": 100.0,
+      "direct_data_time_outage": 0.072117,
+      "conditional_outage": 0.07191254321179438,
+      "absolute_difference": 0.00020445678820561752
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "longitudinal",
+      "model": "independent_AoD_AoA",
+      "switch_delay_us": 100.0,
+      "direct_data_time_outage": 0.077473,
+      "conditional_outage": 0.07770011843472789,
+      "absolute_difference": 0.00022711843472789095
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "longitudinal",
+      "model": "fully_separable",
+      "switch_delay_us": 100.0,
+      "direct_data_time_outage": 0.0709475,
+      "conditional_outage": 0.07098122899306035,
+      "absolute_difference": 3.372899306035293e-05
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "transverse",
+      "model": "common_scatterer",
+      "switch_delay_us": 0.0,
+      "direct_data_time_outage": 0.0149835,
+      "conditional_outage": 0.01513680651569292,
+      "absolute_difference": 0.00015330651569291955
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "transverse",
+      "model": "independent_AoD_AoA",
+      "switch_delay_us": 0.0,
+      "direct_data_time_outage": 0.015306,
+      "conditional_outage": 0.015194455653003201,
+      "absolute_difference": 0.00011154434699679923
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "transverse",
+      "model": "fully_separable",
+      "switch_delay_us": 0.0,
+      "direct_data_time_outage": 0.0151665,
+      "conditional_outage": 0.015249089720513892,
+      "absolute_difference": 8.258972051389257e-05
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "transverse",
+      "model": "common_scatterer",
+      "switch_delay_us": 50.0,
+      "direct_data_time_outage": 0.0169385,
+      "conditional_outage": 0.016956365441149507,
+      "absolute_difference": 1.7865441149508138e-05
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "transverse",
+      "model": "independent_AoD_AoA",
+      "switch_delay_us": 50.0,
+      "direct_data_time_outage": 0.01755,
+      "conditional_outage": 0.01758722684810994,
+      "absolute_difference": 3.722684810994123e-05
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "transverse",
+      "model": "fully_separable",
+      "switch_delay_us": 50.0,
+      "direct_data_time_outage": 0.017223,
+      "conditional_outage": 0.017187770912828436,
+      "absolute_difference": 3.522908717156284e-05
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "transverse",
+      "model": "common_scatterer",
+      "switch_delay_us": 100.0,
+      "direct_data_time_outage": 0.022615,
+      "conditional_outage": 0.022727514491222303,
+      "absolute_difference": 0.00011251449122230348
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "transverse",
+      "model": "independent_AoD_AoA",
+      "switch_delay_us": 100.0,
+      "direct_data_time_outage": 0.0256315,
+      "conditional_outage": 0.025673308941815305,
+      "absolute_difference": 4.1808941815303646e-05
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "transverse",
+      "model": "fully_separable",
+      "switch_delay_us": 100.0,
+      "direct_data_time_outage": 0.023225,
+      "conditional_outage": 0.023393067710290386,
+      "absolute_difference": 0.00016806771029038645
+    }
+  ],
+  "panel_b": [
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "transverse",
+      "observed_ports_k": 6,
+      "switch_delay_us": 0.0,
+      "exact_path_outage": 0.015200741776403268,
+      "local_common_scatterer_outage": 0.015201143546579322,
+      "absolute_difference": 4.01770176053709e-07
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "transverse",
+      "observed_ports_k": 6,
+      "switch_delay_us": 20.0,
+      "exact_path_outage": 0.015430068648854819,
+      "local_common_scatterer_outage": 0.015430155115355648,
+      "absolute_difference": 8.646650082912155e-08
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "transverse",
+      "observed_ports_k": 6,
+      "switch_delay_us": 40.0,
+      "exact_path_outage": 0.01625948823448974,
+      "local_common_scatterer_outage": 0.01626057963271444,
+      "absolute_difference": 1.0913982247014176e-06
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "transverse",
+      "observed_ports_k": 6,
+      "switch_delay_us": 60.0,
+      "exact_path_outage": 0.017774174277210338,
+      "local_common_scatterer_outage": 0.017773412239546347,
+      "absolute_difference": 7.620376639913551e-07
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "transverse",
+      "observed_ports_k": 6,
+      "switch_delay_us": 80.0,
+      "exact_path_outage": 0.019914357965266655,
+      "local_common_scatterer_outage": 0.01991561703046749,
+      "absolute_difference": 1.2590652008342973e-06
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "transverse",
+      "observed_ports_k": 6,
+      "switch_delay_us": 100.0,
+      "exact_path_outage": 0.02280364681958992,
+      "local_common_scatterer_outage": 0.022805679195676182,
+      "absolute_difference": 2.032376086261861e-06
+    }
+  ],
+  "panel_b_reference_note": {
+    "scenario": "yoo_fig9_opposite_direction",
+    "fas_orientation": "transverse",
+    "observed_ports_k": 6,
+    "protocol": "electronic_return_if_needed"
+  }
+}

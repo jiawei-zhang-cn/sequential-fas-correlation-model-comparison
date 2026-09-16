@@ -1,0 +1,40 @@
+{
+  "selection_rule": "The four main six-port, 100-us electronic-return cases were screened, and the largest finite-path covariance deviation was used for the outage check.",
+  "screened_cases": [
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "longitudinal",
+      "covariance_max_absolute_difference": 0.0001973058684370852
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "transverse",
+      "covariance_max_absolute_difference": 0.0002107753494517624
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "longitudinal",
+      "covariance_max_absolute_difference": 0.0007319371684600454
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "transverse",
+      "covariance_max_absolute_difference": 0.0009543568243745224
+    }
+  ],
+  "selected_case": {
+    "scenario": "yoo_fig9_opposite_direction",
+    "fas_orientation": "transverse",
+    "observed_ports_k": 6,
+    "switch_delay_us": 100.0,
+    "protocol": "electronic_return_if_needed",
+    "covariance_max_absolute_difference": 0.0009543568243745224,
+    "los_max_absolute_difference": 0.0,
+    "sample_count": 2000000,
+    "finite_path_outage": 0.02280364681958992,
+    "local_plane_wave_outage": 0.022805679195676238,
+    "finite_path_minus_local_outage": -2.0323760863104038e-06,
+    "relative_outage_difference": 8.912504663791106e-05,
+    "paired_conditional_estimator_standard_error": 3.124992704758434e-06
+  }
+}

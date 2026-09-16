@@ -1,0 +1,85 @@
+{
+  "parameter_sources": {
+    "propagation": {
+      "reference": "Yoo et al., IEEE Transactions on Wireless Communications, 2018",
+      "doi": "10.1109/TWC.2018.2873352"
+    },
+    "sequential_fas_protocol": {
+      "reference": "Dinis and Wichman, IEEE Communications Letters, 2026",
+      "doi": "10.1109/LCOMM.2026.3658190"
+    }
+  },
+  "radio_and_fas": {
+    "wavelength_m": 0.0508,
+    "aperture_wavelengths": 2.0,
+    "total_available_ports": 100,
+    "observed_ports_k": 6,
+    "per_port_switching_delay_us": 100.0,
+    "switching_delay_sweep_us": [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
+    "pilot_snr_db": 10.0,
+    "average_data_snr_db": 10.0,
+    "target_snr_db": 5.0,
+    "fas_orientations_deg": {
+      "longitudinal": 0.0,
+      "transverse": 90.0
+    },
+    "return_protocol": "The last observed port transmits at the final-pilot time; every other selected port transmits one switching interval later."
+  },
+  "propagation_scenarios": {
+    "same_direction": {
+      "internal_name": "yoo_fig8_same_direction",
+      "transmitter_position_m": [-200.0, -8.75],
+      "receiver_position_m": [200.0, -8.75],
+      "transmitter_velocity_m_per_s": [29.166666666666668, 0.0],
+      "receiver_velocity_m_per_s": [29.166666666666668, 0.0],
+      "roadside_scatterer_rectangles_m": [
+        [-263.917, 276.045, 18.364, 106.396],
+        [-263.146, 277.483, -103.747, -20.605]
+      ],
+      "rician_k": 1.535
+    },
+    "opposite_direction": {
+      "internal_name": "yoo_fig9_opposite_direction",
+      "transmitter_position_m": [-50.0, -1.75],
+      "receiver_position_m": [50.0, 1.75],
+      "transmitter_velocity_m_per_s": [9.11111111111111, 0.0],
+      "receiver_velocity_m_per_s": [-10.555555555555555, 0.0],
+      "roadside_scatterer_rectangles_m": [
+        [-58.557, 58.753, 8.0, 13.351],
+        [-58.658, 57.919, -19.114, -8.003]
+      ],
+      "rician_k": 0.0
+    },
+    "external_avazov_paetzold": {
+      "reference": "Avazov and Paetzold, 2012, Section 6",
+      "transmitter_position_m": [0.0, 0.0],
+      "receiver_position_m": [400.0, 10.0],
+      "maximum_transmit_doppler_hz": 91.0,
+      "maximum_receive_doppler_hz": 91.0,
+      "transmit_heading_deg": 0.0,
+      "receive_heading_deg": 180.0,
+      "roadside_scatterer_rectangles_m": [
+        [-50.0, 450.0, 20.0, 120.0],
+        [-50.0, 450.0, -110.0, -10.0]
+      ],
+      "rician_k_values": [0.0, 0.5, 1.0]
+    }
+  },
+  "numerical_settings": {
+    "composite_quadrature_order": 6,
+    "maximum_quadrature_panel_size_m": 10.0,
+    "switching_sweep_samples_per_model_case": 500000,
+    "validation_samples_per_point": 2000000,
+    "exact_path_check_samples": 2000000,
+    "zero_return_delay_samples_per_case": 2000000,
+    "external_scenario_samples_per_case": 1000000,
+    "monte_carlo_chunk_size": 200000,
+    "validation_delays_us": [0, 50, 100],
+    "exact_path_validation_delays_us": [0, 20, 40, 60, 80, 100]
+  },
+  "correlation_models": {
+    "common_scatterer": "The same scatterer jointly determines transmit direction, receive direction, Doppler, and FAS spatial phase.",
+    "independent_AoD_AoA": "The transmit-side and receive-side directional marginals are retained while their common-scatterer dependence is removed.",
+    "fully_separable": "The joint space-time correlation is replaced by the product of the common-scatterer spatial and temporal marginals."
+  }
+}

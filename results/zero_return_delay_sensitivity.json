@@ -1,0 +1,36 @@
+{
+  "protocol": "data transmission starts at the final-pilot time without an additional selected-port return delay",
+  "observed_ports_k": 6,
+  "switch_time_us": 100.0,
+  "sample_count_per_case": 2000000,
+  "rows": [
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "longitudinal",
+      "common_scatterer_outage": 0.119979,
+      "independent_AoD_AoA_outage": 0.109012,
+      "relative_error_percent": 9.140766300769306
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "transverse",
+      "common_scatterer_outage": 0.048128,
+      "independent_AoD_AoA_outage": 0.0423645,
+      "relative_error_percent": 11.975357380319146
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "longitudinal",
+      "common_scatterer_outage": 0.0660055,
+      "independent_AoD_AoA_outage": 0.0702335,
+      "relative_error_percent": 6.405526812159608
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "transverse",
+      "common_scatterer_outage": 0.019647,
+      "independent_AoD_AoA_outage": 0.0212485,
+      "relative_error_percent": 8.151371710693738
+    }
+  ]
+}

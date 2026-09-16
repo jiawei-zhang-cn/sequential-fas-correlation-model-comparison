@@ -1,0 +1,2727 @@
+{
+  "protocol": "electronic_return_if_needed",
+  "protocol_definition": "The last observed port transmits at the final-pilot time; every other selected port transmits one switching interval later.",
+  "source_for_switching_axis": "Dinis and Wichman, IEEE Communications Letters 2026, Fig. 2",
+  "observed_ports_k": 6,
+  "sample_count_per_model_case": 500000,
+  "switching_delays_us": [
+    0,
+    10,
+    20,
+    30,
+    40,
+    50,
+    60,
+    70,
+    80,
+    90,
+    100
+  ],
+  "metric_definitions": {
+    "net_relative_error": "abs(common_minus_model) / common_outage",
+    "internal_relative_mismatch": "(abs(observation_contribution) + abs(conditional_contribution)) / common_outage",
+    "cancellation_index": "1 - abs(total_difference) / sum_abs_contributions"
+  },
+  "classification_summaries": [
+    {
+      "model": "independent_AoD_AoA",
+      "tolerance": 0.01,
+      "positive_delay_point_count": 40,
+      "class_counts": {
+        "true_low_mismatch": 5,
+        "masked_low_net_error": 1,
+        "visible_error": 34
+      },
+      "masked_internal_relative_mismatch_max": 0.010575399002139111,
+      "masked_cancellation_index_max": 0.5294158399251473
+    },
+    {
+      "model": "independent_AoD_AoA",
+      "tolerance": 0.05,
+      "positive_delay_point_count": 40,
+      "class_counts": {
+        "true_low_mismatch": 19,
+        "masked_low_net_error": 0,
+        "visible_error": 21
+      },
+      "masked_internal_relative_mismatch_max": null,
+      "masked_cancellation_index_max": null
+    },
+    {
+      "model": "independent_AoD_AoA",
+      "tolerance": 0.1,
+      "positive_delay_point_count": 40,
+      "class_counts": {
+        "true_low_mismatch": 32,
+        "masked_low_net_error": 1,
+        "visible_error": 7
+      },
+      "masked_internal_relative_mismatch_max": 0.10913714564294531,
+      "masked_cancellation_index_max": 0.2700927943154864
+    },
+    {
+      "model": "fully_separable",
+      "tolerance": 0.01,
+      "positive_delay_point_count": 40,
+      "class_counts": {
+        "true_low_mismatch": 5,
+        "masked_low_net_error": 10,
+        "visible_error": 25
+      },
+      "masked_internal_relative_mismatch_max": 0.09565209737670727,
+      "masked_cancellation_index_max": 0.9988593863723709
+    },
+    {
+      "model": "fully_separable",
+      "tolerance": 0.05,
+      "positive_delay_point_count": 40,
+      "class_counts": {
+        "true_low_mismatch": 22,
+        "masked_low_net_error": 8,
+        "visible_error": 10
+      },
+      "masked_internal_relative_mismatch_max": 0.11027341136926169,
+      "masked_cancellation_index_max": 0.951247449039166
+    },
+    {
+      "model": "fully_separable",
+      "tolerance": 0.1,
+      "positive_delay_point_count": 40,
+      "class_counts": {
+        "true_low_mismatch": 31,
+        "masked_low_net_error": 5,
+        "visible_error": 4
+      },
+      "masked_internal_relative_mismatch_max": 0.11027341136926169,
+      "masked_cancellation_index_max": 0.763159863530125
+    }
+  ],
+  "summaries": [
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "longitudinal",
+      "model": "independent_AoD_AoA",
+      "first_5_percent_switch_time_us": 50,
+      "first_10_percent_switch_time_us": null,
+      "conditional_dominant_positive_delay_points": 10,
+      "opposing_contribution_positive_delay_points": 0,
+      "positive_delay_point_count": 10,
+      "at_100_us": {
+        "net_relative_error": 0.09442213694003682,
+        "internal_relative_mismatch": 0.09442213694003682,
+        "cancellation_index": 0.0,
+        "common_minus_model": 0.013706264064288872,
+        "observation_law_contribution": 0.0013965769453516909,
+        "conditional_aging_contribution": 0.012309687118937181,
+        "conditional_absolute_share": 0.8981066657696741,
+        "mechanism_relation": "same_direction"
+      }
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "longitudinal",
+      "model": "fully_separable",
+      "first_5_percent_switch_time_us": 50,
+      "first_10_percent_switch_time_us": 70,
+      "conditional_dominant_positive_delay_points": 0,
+      "opposing_contribution_positive_delay_points": 6,
+      "positive_delay_point_count": 10,
+      "at_100_us": {
+        "net_relative_error": 0.17577312890455973,
+        "internal_relative_mismatch": 0.17577312890455976,
+        "cancellation_index": 2.220446049250313e-16,
+        "common_minus_model": 0.025515128107110634,
+        "observation_law_contribution": 0.012834402116274148,
+        "conditional_aging_contribution": 0.012680725990836493,
+        "conditional_absolute_share": 0.49698852922092857,
+        "mechanism_relation": "same_direction"
+      }
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "transverse",
+      "model": "independent_AoD_AoA",
+      "first_5_percent_switch_time_us": 40,
+      "first_10_percent_switch_time_us": 60,
+      "conditional_dominant_positive_delay_points": 9,
+      "opposing_contribution_positive_delay_points": 0,
+      "positive_delay_point_count": 10,
+      "at_100_us": {
+        "net_relative_error": 0.10733936156774596,
+        "internal_relative_mismatch": 0.10733936156774594,
+        "cancellation_index": 0.0,
+        "common_minus_model": 0.007080927041855531,
+        "observation_law_contribution": 0.0010462157737681531,
+        "conditional_aging_contribution": 0.006034711268087377,
+        "conditional_absolute_share": 0.8522487567540314,
+        "mechanism_relation": "same_direction"
+      }
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "transverse",
+      "model": "fully_separable",
+      "first_5_percent_switch_time_us": 30,
+      "first_10_percent_switch_time_us": null,
+      "conditional_dominant_positive_delay_points": 10,
+      "opposing_contribution_positive_delay_points": 9,
+      "positive_delay_point_count": 10,
+      "at_100_us": {
+        "net_relative_error": 0.019773323818702584,
+        "internal_relative_mismatch": 0.0985078047448453,
+        "cancellation_index": 0.7992715006702321,
+        "common_minus_model": -0.0013044000009898454,
+        "observation_law_contribution": 0.0025969649296102566,
+        "conditional_aging_contribution": -0.0039013649306001022,
+        "conditional_absolute_share": 0.600364249664884,
+        "mechanism_relation": "opposing"
+      }
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "longitudinal",
+      "model": "independent_AoD_AoA",
+      "first_5_percent_switch_time_us": 80,
+      "first_10_percent_switch_time_us": null,
+      "conditional_dominant_positive_delay_points": 6,
+      "opposing_contribution_positive_delay_points": 1,
+      "positive_delay_point_count": 10,
+      "at_100_us": {
+        "net_relative_error": 0.07876821640565818,
+        "internal_relative_mismatch": 0.07876821640565818,
+        "cancellation_index": 0.0,
+        "common_minus_model": -0.005676465252252001,
+        "observation_law_contribution": -0.0013471818722437827,
+        "conditional_aging_contribution": -0.004329283380008218,
+        "conditional_absolute_share": 0.7626724004503823,
+        "mechanism_relation": "same_direction"
+      }
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "longitudinal",
+      "model": "fully_separable",
+      "first_5_percent_switch_time_us": null,
+      "first_10_percent_switch_time_us": null,
+      "conditional_dominant_positive_delay_points": 7,
+      "opposing_contribution_positive_delay_points": 10,
+      "positive_delay_point_count": 10,
+      "at_100_us": {
+        "net_relative_error": 0.013608920555090418,
+        "internal_relative_mismatch": 0.03965508535560914,
+        "cancellation_index": 0.6568177717170022,
+        "common_minus_model": 0.0009807326885984892,
+        "observation_law_contribution": -0.0009385140110520079,
+        "conditional_aging_contribution": 0.0019192466996504971,
+        "conditional_absolute_share": 0.671591114141499,
+        "mechanism_relation": "opposing"
+      }
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "transverse",
+      "model": "independent_AoD_AoA",
+      "first_5_percent_switch_time_us": 60,
+      "first_10_percent_switch_time_us": 90,
+      "conditional_dominant_positive_delay_points": 10,
+      "opposing_contribution_positive_delay_points": 10,
+      "positive_delay_point_count": 10,
+      "at_100_us": {
+        "net_relative_error": 0.12304330348742444,
+        "internal_relative_mismatch": 0.1430059646476235,
+        "cancellation_index": 0.13959320654483487,
+        "common_minus_model": -0.0028039902770224346,
+        "observation_law_contribution": 0.00022746100848313326,
+        "conditional_aging_contribution": -0.0030314512855055676,
+        "conditional_absolute_share": 0.9302033967275825,
+        "mechanism_relation": "opposing"
+      }
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "transverse",
+      "model": "fully_separable",
+      "first_5_percent_switch_time_us": null,
+      "first_10_percent_switch_time_us": null,
+      "conditional_dominant_positive_delay_points": 9,
+      "opposing_contribution_positive_delay_points": 9,
+      "positive_delay_point_count": 10,
+      "at_100_us": {
+        "net_relative_error": 0.02942413660278319,
+        "internal_relative_mismatch": 0.05552873096241401,
+        "cancellation_index": 0.470109687493135,
+        "common_minus_model": -0.000670536230786557,
+        "observation_law_contribution": 0.0002974441789816728,
+        "conditional_aging_contribution": -0.0009679804097682297,
+        "conditional_absolute_share": 0.7649451562534325,
+        "mechanism_relation": "opposing"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "longitudinal",
+      "model": "independent_AoD_AoA",
+      "observed_ports_k": 6,
+      "switch_time_us": 0,
+      "total_scan_time_us": 0,
+      "common_outage": 0.04925136947394901,
+      "common_minus_model": -8.339808819926262e-15,
+      "net_relative_error": 1.6933151116412135e-13,
+      "internal_relative_mismatch": 1.6933151116412135e-13,
+      "cancellation_index": 0.0,
+      "applicability_classes": {
+        "1_percent": "true_low_mismatch",
+        "5_percent": "true_low_mismatch",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": -2.4526877516387525e-15,
+      "conditional_aging_contribution": -5.887121068287511e-15,
+      "conditional_absolute_share": 0.7059059980153792,
+      "mechanism_relation": "identical",
+      "dominant_mechanism": "none",
+      "standard_errors": {
+        "total_common_minus_model": 4.791031135920466e-17,
+        "observation_law_contribution": 3.600032966999721e-17,
+        "conditional_aging_contribution": 2.116229656284628e-17
+      }
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "longitudinal",
+      "model": "fully_separable",
+      "observed_ports_k": 6,
+      "switch_time_us": 0,
+      "total_scan_time_us": 0,
+      "common_outage": 0.04925136947394901,
+      "common_minus_model": 3.579787617640037e-14,
+      "net_relative_error": 7.268402190386863e-13,
+      "internal_relative_mismatch": 7.268402190386865e-13,
+      "cancellation_index": 2.220446049250313e-16,
+      "applicability_classes": {
+        "1_percent": "true_low_mismatch",
+        "5_percent": "true_low_mismatch",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": 1.3826962282927844e-14,
+      "conditional_aging_contribution": 2.197091389347253e-14,
+      "conditional_absolute_share": 0.6137490890578804,
+      "mechanism_relation": "identical",
+      "dominant_mechanism": "none",
+      "standard_errors": {
+        "total_common_minus_model": 1.2622180533101538e-16,
+        "observation_law_contribution": 5.192346363943423e-17,
+        "conditional_aging_contribution": 8.317714752231303e-17
+      }
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "longitudinal",
+      "model": "independent_AoD_AoA",
+      "observed_ports_k": 6,
+      "switch_time_us": 10,
+      "total_scan_time_us": 50,
+      "common_outage": 0.05112826311808827,
+      "common_minus_model": 8.746647970330732e-05,
+      "net_relative_error": 0.0017107265995187548,
+      "internal_relative_mismatch": 0.0017107265995187548,
+      "cancellation_index": 0.0,
+      "applicability_classes": {
+        "1_percent": "true_low_mismatch",
+        "5_percent": "true_low_mismatch",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": 9.433823384399795e-06,
+      "conditional_aging_contribution": 7.803265631890752e-05,
+      "conditional_absolute_share": 0.8921435569786276,
+      "mechanism_relation": "same_direction",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 2.329249074211945e-05,
+        "observation_law_contribution": 2.0539418117493984e-05,
+        "conditional_aging_contribution": 8.357343088195076e-06
+      }
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "longitudinal",
+      "model": "fully_separable",
+      "observed_ports_k": 6,
+      "switch_time_us": 10,
+      "total_scan_time_us": 50,
+      "common_outage": 0.05112826311808827,
+      "common_minus_model": 0.00013239560749745444,
+      "net_relative_error": 0.0025894798575822387,
+      "internal_relative_mismatch": 0.036334996781679556,
+      "cancellation_index": 0.928733174984403,
+      "applicability_classes": {
+        "1_percent": "masked_low_net_error",
+        "5_percent": "true_low_mismatch",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": 0.0009950704416730287,
+      "conditional_aging_contribution": -0.0008626748341755742,
+      "conditional_absolute_share": 0.4643665874922015,
+      "mechanism_relation": "opposing",
+      "dominant_mechanism": "observation_selection",
+      "standard_errors": {
+        "total_common_minus_model": 5.001278310501304e-05,
+        "observation_law_contribution": 3.7286955685118955e-05,
+        "conditional_aging_contribution": 2.4344051360064343e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "longitudinal",
+      "model": "independent_AoD_AoA",
+      "observed_ports_k": 6,
+      "switch_time_us": 20,
+      "total_scan_time_us": 100,
+      "common_outage": 0.05563364277744772,
+      "common_minus_model": 0.0006294001072473794,
+      "net_relative_error": 0.011313300295024364,
+      "internal_relative_mismatch": 0.011313300295024366,
+      "cancellation_index": 2.220446049250313e-16,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "true_low_mismatch",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": 7.680887844295924e-05,
+      "conditional_aging_contribution": 0.0005525912288044202,
+      "conditional_absolute_share": 0.8779649422386097,
+      "mechanism_relation": "same_direction",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 4.225452595701779e-05,
+        "observation_law_contribution": 3.5913266814856206e-05,
+        "conditional_aging_contribution": 1.7115404864707675e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "longitudinal",
+      "model": "fully_separable",
+      "observed_ports_k": 6,
+      "switch_time_us": 20,
+      "total_scan_time_us": 100,
+      "common_outage": 0.05563364277744772,
+      "common_minus_model": 0.00019694460583520208,
+      "net_relative_error": 0.0035400271490947156,
+      "internal_relative_mismatch": 0.07261214191517175,
+      "cancellation_index": 0.951247449039166,
+      "applicability_classes": {
+        "1_percent": "masked_low_net_error",
+        "5_percent": "masked_low_net_error",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": 0.002118311285224603,
+      "conditional_aging_contribution": -0.0019213666793894007,
+      "conditional_absolute_share": 0.47562372451958307,
+      "mechanism_relation": "opposing",
+      "dominant_mechanism": "observation_selection",
+      "standard_errors": {
+        "total_common_minus_model": 8.70869374931032e-05,
+        "observation_law_contribution": 6.10149511442863e-05,
+        "conditional_aging_contribution": 4.555452129080472e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "longitudinal",
+      "model": "independent_AoD_AoA",
+      "observed_ports_k": 6,
+      "switch_time_us": 30,
+      "total_scan_time_us": 150,
+      "common_outage": 0.062176706077434536,
+      "common_minus_model": 0.0015440983194099408,
+      "net_relative_error": 0.02483403217737088,
+      "internal_relative_mismatch": 0.024834032177370884,
+      "cancellation_index": 1.1102230246251565e-16,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "true_low_mismatch",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": 1.3470388436668284e-05,
+      "conditional_aging_contribution": 0.0015306279309732728,
+      "conditional_absolute_share": 0.9912762106743204,
+      "mechanism_relation": "same_direction",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 6.303181818162677e-05,
+        "observation_law_contribution": 5.314840287499167e-05,
+        "conditional_aging_contribution": 2.606765945550293e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "longitudinal",
+      "model": "fully_separable",
+      "observed_ports_k": 6,
+      "switch_time_us": 30,
+      "total_scan_time_us": 150,
+      "common_outage": 0.062176706077434536,
+      "common_minus_model": 0.0006005503255666767,
+      "net_relative_error": 0.009658767140522925,
+      "internal_relative_mismatch": 0.09565209737670727,
+      "cancellation_index": 0.8990218990966425,
+      "applicability_classes": {
+        "1_percent": "masked_low_net_error",
+        "5_percent": "masked_low_net_error",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": 0.003273941334924176,
+      "conditional_aging_contribution": -0.002673391009357499,
+      "conditional_absolute_share": 0.4495109495483212,
+      "mechanism_relation": "opposing",
+      "dominant_mechanism": "observation_selection",
+      "standard_errors": {
+        "total_common_minus_model": 0.0001207685004490133,
+        "observation_law_contribution": 8.349681953801735e-05,
+        "conditional_aging_contribution": 6.459357334486174e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "longitudinal",
+      "model": "independent_AoD_AoA",
+      "observed_ports_k": 6,
+      "switch_time_us": 40,
+      "total_scan_time_us": 200,
+      "common_outage": 0.07157176633195075,
+      "common_minus_model": 0.003221515013866442,
+      "net_relative_error": 0.045010975402297815,
+      "internal_relative_mismatch": 0.045010975402297815,
+      "cancellation_index": 0.0,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "true_low_mismatch",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": 0.00029976930275331116,
+      "conditional_aging_contribution": 0.002921745711113131,
+      "conditional_absolute_share": 0.906947724451692,
+      "mechanism_relation": "same_direction",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 0.0001614407814323674,
+        "observation_law_contribution": 0.00015608620283827905,
+        "conditional_aging_contribution": 3.0766707559224844e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "longitudinal",
+      "model": "fully_separable",
+      "observed_ports_k": 6,
+      "switch_time_us": 40,
+      "total_scan_time_us": 200,
+      "common_outage": 0.07157176633195075,
+      "common_minus_model": 0.0017967873597479192,
+      "net_relative_error": 0.025104694935351977,
+      "internal_relative_mismatch": 0.10599848196990537,
+      "cancellation_index": 0.763159863530125,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "masked_low_net_error",
+        "10_percent": "masked_low_net_error"
+      },
+      "observation_law_contribution": 0.004691642971419741,
+      "conditional_aging_contribution": -0.0028948556116718217,
+      "conditional_absolute_share": 0.3815799317650625,
+      "mechanism_relation": "opposing",
+      "dominant_mechanism": "observation_selection",
+      "standard_errors": {
+        "total_common_minus_model": 0.00017389314473022376,
+        "observation_law_contribution": 0.00014310876445233856,
+        "conditional_aging_contribution": 7.189761183526747e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "longitudinal",
+      "model": "independent_AoD_AoA",
+      "observed_ports_k": 6,
+      "switch_time_us": 50,
+      "total_scan_time_us": 250,
+      "common_outage": 0.08364744028769684,
+      "common_minus_model": 0.005071233204333568,
+      "net_relative_error": 0.06062628081494877,
+      "internal_relative_mismatch": 0.06062628081494876,
+      "cancellation_index": 0.0,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "visible_error",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": 0.00035320427823223475,
+      "conditional_aging_contribution": 0.004718028926101333,
+      "conditional_absolute_share": 0.9303514029032608,
+      "mechanism_relation": "same_direction",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 0.00018886253764427134,
+        "observation_law_contribution": 0.00018153166185063722,
+        "conditional_aging_contribution": 3.798079054939373e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "longitudinal",
+      "model": "fully_separable",
+      "observed_ports_k": 6,
+      "switch_time_us": 50,
+      "total_scan_time_us": 250,
+      "common_outage": 0.08364744028769684,
+      "common_minus_model": 0.004343446634001234,
+      "net_relative_error": 0.05192563716310257,
+      "internal_relative_mismatch": 0.09949340607309143,
+      "cancellation_index": 0.47809971321158584,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "visible_error",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": 0.006332907688759862,
+      "conditional_aging_contribution": -0.001989461054758628,
+      "conditional_absolute_share": 0.2390498566057929,
+      "mechanism_relation": "opposing",
+      "dominant_mechanism": "observation_selection",
+      "standard_errors": {
+        "total_common_minus_model": 0.00020577873890204436,
+        "observation_law_contribution": 0.0001678172388133608,
+        "conditional_aging_contribution": 8.83750554874171e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "longitudinal",
+      "model": "independent_AoD_AoA",
+      "observed_ports_k": 6,
+      "switch_time_us": 60,
+      "total_scan_time_us": 300,
+      "common_outage": 0.09729616545943014,
+      "common_minus_model": 0.007523406196309076,
+      "net_relative_error": 0.07732479651981898,
+      "internal_relative_mismatch": 0.07732479651981898,
+      "cancellation_index": 0.0,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "visible_error",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": 0.0008339425587964342,
+      "conditional_aging_contribution": 0.006689463637512641,
+      "conditional_absolute_share": 0.889153591201076,
+      "mechanism_relation": "same_direction",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 0.0002190398580557444,
+        "observation_law_contribution": 0.00021024352720120572,
+        "conditional_aging_contribution": 4.417548564806969e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "longitudinal",
+      "model": "fully_separable",
+      "observed_ports_k": 6,
+      "switch_time_us": 60,
+      "total_scan_time_us": 300,
+      "common_outage": 0.09729616545943014,
+      "common_minus_model": 0.008376882623077168,
+      "net_relative_error": 0.08609673961478062,
+      "internal_relative_mismatch": 0.08653477932691918,
+      "cancellation_index": 0.005062007617581132,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "visible_error",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": 0.008398192415232186,
+      "conditional_aging_contribution": -2.1309792155018243e-05,
+      "conditional_absolute_share": 0.0025310038087906434,
+      "mechanism_relation": "opposing",
+      "dominant_mechanism": "observation_selection",
+      "standard_errors": {
+        "total_common_minus_model": 0.0002481640298820319,
+        "observation_law_contribution": 0.0002075331361633246,
+        "conditional_aging_contribution": 0.00010079725966475616
+      }
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "longitudinal",
+      "model": "independent_AoD_AoA",
+      "observed_ports_k": 6,
+      "switch_time_us": 70,
+      "total_scan_time_us": 350,
+      "common_outage": 0.1105086064597946,
+      "common_minus_model": 0.009606940569900418,
+      "net_relative_error": 0.0869338676657336,
+      "internal_relative_mismatch": 0.0869338676657336,
+      "cancellation_index": 0.0,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "visible_error",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": 0.0011528492827850476,
+      "conditional_aging_contribution": 0.00845409128711537,
+      "conditional_absolute_share": 0.8799982914022546,
+      "mechanism_relation": "same_direction",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 0.0002502273105994136,
+        "observation_law_contribution": 0.0002400641568948038,
+        "conditional_aging_contribution": 4.92025594750714e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "longitudinal",
+      "model": "fully_separable",
+      "observed_ports_k": 6,
+      "switch_time_us": 70,
+      "total_scan_time_us": 350,
+      "common_outage": 0.1105086064597946,
+      "common_minus_model": 0.01189010438445454,
+      "net_relative_error": 0.10759437445969798,
+      "internal_relative_mismatch": 0.10759437445969801,
+      "cancellation_index": 3.3306690738754696e-16,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "visible_error",
+        "10_percent": "visible_error"
+      },
+      "observation_law_contribution": 0.009162107138107504,
+      "conditional_aging_contribution": 0.0027279972463470385,
+      "conditional_absolute_share": 0.22943425542282866,
+      "mechanism_relation": "same_direction",
+      "dominant_mechanism": "observation_selection",
+      "standard_errors": {
+        "total_common_minus_model": 0.00026782516150617277,
+        "observation_law_contribution": 0.00021472612875143133,
+        "conditional_aging_contribution": 0.00012083803269588751
+      }
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "longitudinal",
+      "model": "independent_AoD_AoA",
+      "observed_ports_k": 6,
+      "switch_time_us": 80,
+      "total_scan_time_us": 400,
+      "common_outage": 0.12314695041933534,
+      "common_minus_model": 0.010962875874042172,
+      "net_relative_error": 0.08902271503039094,
+      "internal_relative_mismatch": 0.08902271503039096,
+      "cancellation_index": 1.1102230246251565e-16,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "visible_error",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": 0.0009130066231757642,
+      "conditional_aging_contribution": 0.01004986925086641,
+      "conditional_absolute_share": 0.9167183288704769,
+      "mechanism_relation": "same_direction",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 0.0002753220953953776,
+        "observation_law_contribution": 0.0002659713063178673,
+        "conditional_aging_contribution": 5.105702074483869e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "longitudinal",
+      "model": "fully_separable",
+      "observed_ports_k": 6,
+      "switch_time_us": 80,
+      "total_scan_time_us": 400,
+      "common_outage": 0.12314695041933534,
+      "common_minus_model": 0.016264147201776737,
+      "net_relative_error": 0.13207105126350818,
+      "internal_relative_mismatch": 0.13207105126350818,
+      "cancellation_index": 0.0,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "visible_error",
+        "10_percent": "visible_error"
+      },
+      "observation_law_contribution": 0.010395859709695258,
+      "conditional_aging_contribution": 0.00586828749208148,
+      "conditional_absolute_share": 0.360811262913337,
+      "mechanism_relation": "same_direction",
+      "dominant_mechanism": "observation_selection",
+      "standard_errors": {
+        "total_common_minus_model": 0.0002886241113464761,
+        "observation_law_contribution": 0.0002304736908982554,
+        "conditional_aging_contribution": 0.00013302718186475128
+      }
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "longitudinal",
+      "model": "independent_AoD_AoA",
+      "observed_ports_k": 6,
+      "switch_time_us": 90,
+      "total_scan_time_us": 450,
+      "common_outage": 0.13545563858920112,
+      "common_minus_model": 0.012961134423394997,
+      "net_relative_error": 0.09568545509354892,
+      "internal_relative_mismatch": 0.09568545509354891,
+      "cancellation_index": 0.0,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "visible_error",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": 0.0015545180344861582,
+      "conditional_aging_contribution": 0.011406616388908837,
+      "conditional_absolute_share": 0.8800631191911539,
+      "mechanism_relation": "same_direction",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 0.0002480923775033251,
+        "observation_law_contribution": 0.00023471560008567303,
+        "conditional_aging_contribution": 5.8107159638186525e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "longitudinal",
+      "model": "fully_separable",
+      "observed_ports_k": 6,
+      "switch_time_us": 90,
+      "total_scan_time_us": 450,
+      "common_outage": 0.13545563858920112,
+      "common_minus_model": 0.02119388128093798,
+      "net_relative_error": 0.15646363268208469,
+      "internal_relative_mismatch": 0.15646363268208466,
+      "cancellation_index": 0.0,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "visible_error",
+        "10_percent": "visible_error"
+      },
+      "observation_law_contribution": 0.01180891683130495,
+      "conditional_aging_contribution": 0.009384964449633026,
+      "conditional_absolute_share": 0.44281480702989373,
+      "mechanism_relation": "same_direction",
+      "dominant_mechanism": "observation_selection",
+      "standard_errors": {
+        "total_common_minus_model": 0.0003047031454416735,
+        "observation_law_contribution": 0.00023234963211594636,
+        "conditional_aging_contribution": 0.00014776448438451082
+      }
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "longitudinal",
+      "model": "independent_AoD_AoA",
+      "observed_ports_k": 6,
+      "switch_time_us": 100,
+      "total_scan_time_us": 500,
+      "common_outage": 0.14515943515441823,
+      "common_minus_model": 0.013706264064288872,
+      "net_relative_error": 0.09442213694003682,
+      "internal_relative_mismatch": 0.09442213694003682,
+      "cancellation_index": 0.0,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "visible_error",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": 0.0013965769453516909,
+      "conditional_aging_contribution": 0.012309687118937181,
+      "conditional_absolute_share": 0.8981066657696741,
+      "mechanism_relation": "same_direction",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 0.00026698206404217757,
+        "observation_law_contribution": 0.0002536626979814622,
+        "conditional_aging_contribution": 5.787770845745605e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "longitudinal",
+      "model": "fully_separable",
+      "observed_ports_k": 6,
+      "switch_time_us": 100,
+      "total_scan_time_us": 500,
+      "common_outage": 0.14515943515441823,
+      "common_minus_model": 0.025515128107110634,
+      "net_relative_error": 0.17577312890455973,
+      "internal_relative_mismatch": 0.17577312890455976,
+      "cancellation_index": 2.220446049250313e-16,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "visible_error",
+        "10_percent": "visible_error"
+      },
+      "observation_law_contribution": 0.012834402116274148,
+      "conditional_aging_contribution": 0.012680725990836493,
+      "conditional_absolute_share": 0.49698852922092857,
+      "mechanism_relation": "same_direction",
+      "dominant_mechanism": "observation_selection",
+      "standard_errors": {
+        "total_common_minus_model": 0.0003196256928128215,
+        "observation_law_contribution": 0.0002431490427135919,
+        "conditional_aging_contribution": 0.0001534237968646908
+      }
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "transverse",
+      "model": "independent_AoD_AoA",
+      "observed_ports_k": 6,
+      "switch_time_us": 0,
+      "total_scan_time_us": 0,
+      "common_outage": 0.008561032386367297,
+      "common_minus_model": -2.4071100311890573e-15,
+      "net_relative_error": 2.8117053207533375e-13,
+      "internal_relative_mismatch": 2.8117053207533375e-13,
+      "cancellation_index": 0.0,
+      "applicability_classes": {
+        "1_percent": "true_low_mismatch",
+        "5_percent": "true_low_mismatch",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": -1.5578934601910991e-15,
+      "conditional_aging_contribution": -8.492165709979582e-16,
+      "conditional_absolute_share": 0.35279507791277187,
+      "mechanism_relation": "identical",
+      "dominant_mechanism": "none",
+      "standard_errors": {
+        "total_common_minus_model": 1.9334722577204407e-17,
+        "observation_law_contribution": 1.3229489657679005e-17,
+        "conditional_aging_contribution": 6.7732888119001716e-18
+      }
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "transverse",
+      "model": "fully_separable",
+      "observed_ports_k": 6,
+      "switch_time_us": 0,
+      "total_scan_time_us": 0,
+      "common_outage": 0.008561032386367297,
+      "common_minus_model": 4.762693865596947e-15,
+      "net_relative_error": 5.563223745282315e-13,
+      "internal_relative_mismatch": 5.563223745282315e-13,
+      "cancellation_index": 0.0,
+      "applicability_classes": {
+        "1_percent": "true_low_mismatch",
+        "5_percent": "true_low_mismatch",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": 2.5644779754900556e-15,
+      "conditional_aging_contribution": 2.198215890106892e-15,
+      "conditional_absolute_share": 0.46154885284262787,
+      "mechanism_relation": "identical",
+      "dominant_mechanism": "none",
+      "standard_errors": {
+        "total_common_minus_model": 3.247294721875442e-17,
+        "observation_law_contribution": 1.8552330406380876e-17,
+        "conditional_aging_contribution": 1.7121249042705084e-17
+      }
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "transverse",
+      "model": "independent_AoD_AoA",
+      "observed_ports_k": 6,
+      "switch_time_us": 10,
+      "total_scan_time_us": 50,
+      "common_outage": 0.009118481280815719,
+      "common_minus_model": 8.091762219059383e-05,
+      "net_relative_error": 0.00887402405056592,
+      "internal_relative_mismatch": 0.008874024050565922,
+      "cancellation_index": 2.220446049250313e-16,
+      "applicability_classes": {
+        "1_percent": "true_low_mismatch",
+        "5_percent": "true_low_mismatch",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": 5.711142341535711e-05,
+      "conditional_aging_contribution": 2.3806198775236727e-05,
+      "conditional_absolute_share": 0.2942028958681394,
+      "mechanism_relation": "same_direction",
+      "dominant_mechanism": "observation_selection",
+      "standard_errors": {
+        "total_common_minus_model": 5.26215270810014e-05,
+        "observation_law_contribution": 5.172507425677714e-05,
+        "conditional_aging_contribution": 3.256539463301454e-06
+      }
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "transverse",
+      "model": "fully_separable",
+      "observed_ports_k": 6,
+      "switch_time_us": 10,
+      "total_scan_time_us": 50,
+      "common_outage": 0.009118481280815719,
+      "common_minus_model": -3.1595491473072585e-05,
+      "net_relative_error": 0.003464994937210215,
+      "internal_relative_mismatch": 0.024407700423422565,
+      "cancellation_index": 0.8580368130917785,
+      "applicability_classes": {
+        "1_percent": "masked_low_net_error",
+        "5_percent": "true_low_mismatch",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": 9.548283397283196e-05,
+      "conditional_aging_contribution": -0.0001270783254459046,
+      "conditional_absolute_share": 0.5709815934541109,
+      "mechanism_relation": "opposing",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 5.797075344197879e-05,
+        "observation_law_contribution": 5.5530758668548745e-05,
+        "conditional_aging_contribution": 6.89901216377718e-06
+      }
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "transverse",
+      "model": "independent_AoD_AoA",
+      "observed_ports_k": 6,
+      "switch_time_us": 20,
+      "total_scan_time_us": 100,
+      "common_outage": 0.01077179799941423,
+      "common_minus_model": 0.00023389666178398128,
+      "net_relative_error": 0.021713799478666473,
+      "internal_relative_mismatch": 0.021713799478666473,
+      "cancellation_index": 0.0,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "true_low_mismatch",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": 3.6997918513190574e-05,
+      "conditional_aging_contribution": 0.0001968987432707907,
+      "conditional_absolute_share": 0.8418193819826273,
+      "mechanism_relation": "same_direction",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 5.14141206603827e-05,
+        "observation_law_contribution": 4.868211082028308e-05,
+        "conditional_aging_contribution": 7.3776398221409075e-06
+      }
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "transverse",
+      "model": "fully_separable",
+      "observed_ports_k": 6,
+      "switch_time_us": 20,
+      "total_scan_time_us": 100,
+      "common_outage": 0.01077179799941423,
+      "common_minus_model": -0.00043325744432420367,
+      "net_relative_error": 0.040221460182205813,
+      "internal_relative_mismatch": 0.04022146018220581,
+      "cancellation_index": 0.0,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "true_low_mismatch",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": -2.1524826528963602e-06,
+      "conditional_aging_contribution": -0.00043110496167130723,
+      "conditional_absolute_share": 0.9950318622770491,
+      "mechanism_relation": "same_direction",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 7.372899146080753e-05,
+        "observation_law_contribution": 6.988468772923284e-05,
+        "conditional_aging_contribution": 1.3930589514688974e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "transverse",
+      "model": "independent_AoD_AoA",
+      "observed_ports_k": 6,
+      "switch_time_us": 30,
+      "total_scan_time_us": 150,
+      "common_outage": 0.013879679155833121,
+      "common_minus_model": 0.0006250472829712154,
+      "net_relative_error": 0.04503326596771733,
+      "internal_relative_mismatch": 0.04503326596771734,
+      "cancellation_index": 2.220446049250313e-16,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "true_low_mismatch",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": 4.584141347210886e-05,
+      "conditional_aging_contribution": 0.0005792058694991066,
+      "conditional_absolute_share": 0.9266592868715502,
+      "mechanism_relation": "same_direction",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 7.877929529606822e-05,
+        "observation_law_contribution": 7.63702679318474e-05,
+        "conditional_aging_contribution": 9.938145828645174e-06
+      }
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "transverse",
+      "model": "fully_separable",
+      "observed_ports_k": 6,
+      "switch_time_us": 30,
+      "total_scan_time_us": 150,
+      "common_outage": 0.013879679155833121,
+      "common_minus_model": -0.0008889920113167767,
+      "net_relative_error": 0.0640498963510382,
+      "internal_relative_mismatch": 0.07337655501906092,
+      "cancellation_index": 0.1271067940652153,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "visible_error",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": 6.472551495406253e-05,
+      "conditional_aging_contribution": -0.0009537175262708394,
+      "conditional_absolute_share": 0.9364466029673925,
+      "mechanism_relation": "opposing",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 8.878002452125314e-05,
+        "observation_law_contribution": 8.384097305044355e-05,
+        "conditional_aging_contribution": 1.9714647769391666e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "transverse",
+      "model": "independent_AoD_AoA",
+      "observed_ports_k": 6,
+      "switch_time_us": 40,
+      "total_scan_time_us": 200,
+      "common_outage": 0.018875935988492663,
+      "common_minus_model": 0.0014097769836758384,
+      "net_relative_error": 0.07468646770868903,
+      "internal_relative_mismatch": 0.07468646770868904,
+      "cancellation_index": 1.1102230246251565e-16,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "visible_error",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": 0.00018356292593840526,
+      "conditional_aging_contribution": 0.0012262140577374333,
+      "conditional_absolute_share": 0.8697929331632404,
+      "mechanism_relation": "same_direction",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 9.008973403737061e-05,
+        "observation_law_contribution": 8.680506679701149e-05,
+        "conditional_aging_contribution": 1.3787354033358795e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "transverse",
+      "model": "fully_separable",
+      "observed_ports_k": 6,
+      "switch_time_us": 40,
+      "total_scan_time_us": 200,
+      "common_outage": 0.018875935988492663,
+      "common_minus_model": -0.0013113632751877743,
+      "net_relative_error": 0.06947275493979323,
+      "internal_relative_mismatch": 0.10369056850886449,
+      "cancellation_index": 0.32999928596346717,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "visible_error",
+        "10_percent": "masked_low_net_error"
+      },
+      "observation_law_contribution": 0.00032294662929798255,
+      "conditional_aging_contribution": -0.0016343099044857567,
+      "conditional_absolute_share": 0.8350003570182664,
+      "mechanism_relation": "opposing",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 0.00010110134695720757,
+        "observation_law_contribution": 9.390352174050315e-05,
+        "conditional_aging_contribution": 2.728629400650398e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "transverse",
+      "model": "independent_AoD_AoA",
+      "observed_ports_k": 6,
+      "switch_time_us": 50,
+      "total_scan_time_us": 250,
+      "common_outage": 0.025342356281810818,
+      "common_minus_model": 0.0024063251521804978,
+      "net_relative_error": 0.09495269995503969,
+      "internal_relative_mismatch": 0.09495269995503969,
+      "cancellation_index": 0.0,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "visible_error",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": 0.00028551348191102534,
+      "conditional_aging_contribution": 0.0021208116702694725,
+      "conditional_absolute_share": 0.8813487522032064,
+      "mechanism_relation": "same_direction",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 8.258638580673183e-05,
+        "observation_law_contribution": 7.557166558197465e-05,
+        "conditional_aging_contribution": 2.0826626082802278e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "transverse",
+      "model": "fully_separable",
+      "observed_ports_k": 6,
+      "switch_time_us": 50,
+      "total_scan_time_us": 250,
+      "common_outage": 0.025342356281810818,
+      "common_minus_model": -0.0018859888705235247,
+      "net_relative_error": 0.07442042285062385,
+      "internal_relative_mismatch": 0.10650043369618876,
+      "cancellation_index": 0.30121953246762156,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "visible_error",
+        "10_percent": "masked_low_net_error"
+      },
+      "observation_law_contribution": 0.0004064915321863304,
+      "conditional_aging_contribution": -0.0022924804027098554,
+      "conditional_absolute_share": 0.8493902337661893,
+      "mechanism_relation": "opposing",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 0.00011645328437662639,
+        "observation_law_contribution": 0.00010718384052798796,
+        "conditional_aging_contribution": 3.4366750489769325e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "transverse",
+      "model": "independent_AoD_AoA",
+      "observed_ports_k": 6,
+      "switch_time_us": 60,
+      "total_scan_time_us": 300,
+      "common_outage": 0.033141409284472734,
+      "common_minus_model": 0.0034903898114644174,
+      "net_relative_error": 0.1053180865516096,
+      "internal_relative_mismatch": 0.10531808655160961,
+      "cancellation_index": 1.1102230246251565e-16,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "visible_error",
+        "10_percent": "visible_error"
+      },
+      "observation_law_contribution": 0.00033391152302854836,
+      "conditional_aging_contribution": 0.0031564782884358693,
+      "conditional_absolute_share": 0.9043340311354927,
+      "mechanism_relation": "same_direction",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 0.00010064870957469802,
+        "observation_law_contribution": 9.315117195660507e-05,
+        "conditional_aging_contribution": 2.4773847485242026e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "transverse",
+      "model": "fully_separable",
+      "observed_ports_k": 6,
+      "switch_time_us": 60,
+      "total_scan_time_us": 300,
+      "common_outage": 0.033141409284472734,
+      "common_minus_model": -0.00219811399837485,
+      "net_relative_error": 0.06632530256957724,
+      "internal_relative_mismatch": 0.10762832549055906,
+      "cancellation_index": 0.38375606730595146,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "visible_error",
+        "10_percent": "masked_low_net_error"
+      },
+      "observation_law_contribution": 0.0006844201936551087,
+      "conditional_aging_contribution": -0.0028825341920299587,
+      "conditional_absolute_share": 0.8081219663470243,
+      "mechanism_relation": "opposing",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 0.00012975274106015954,
+        "observation_law_contribution": 0.00011649745507188047,
+        "conditional_aging_contribution": 3.9251950419845676e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "transverse",
+      "model": "independent_AoD_AoA",
+      "observed_ports_k": 6,
+      "switch_time_us": 70,
+      "total_scan_time_us": 350,
+      "common_outage": 0.041876249851982905,
+      "common_minus_model": 0.0048262071986227735,
+      "net_relative_error": 0.1152492693515211,
+      "internal_relative_mismatch": 0.11524926935152112,
+      "cancellation_index": 2.220446049250313e-16,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "visible_error",
+        "10_percent": "visible_error"
+      },
+      "observation_law_contribution": 0.0005886403567064028,
+      "conditional_aging_contribution": 0.004237566841916372,
+      "conditional_absolute_share": 0.8780325144609664,
+      "mechanism_relation": "same_direction",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 0.00013453768957016052,
+        "observation_law_contribution": 0.0001282824160676655,
+        "conditional_aging_contribution": 2.5815269749949163e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "transverse",
+      "model": "fully_separable",
+      "observed_ports_k": 6,
+      "switch_time_us": 70,
+      "total_scan_time_us": 350,
+      "common_outage": 0.041876249851982905,
+      "common_minus_model": -0.002086852038856922,
+      "net_relative_error": 0.049833785170190124,
+      "internal_relative_mismatch": 0.11027341136926169,
+      "cancellation_index": 0.5480888407150419,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "masked_low_net_error",
+        "10_percent": "masked_low_net_error"
+      },
+      "observation_law_contribution": 0.0012654924438363865,
+      "conditional_aging_contribution": -0.003352344482693309,
+      "conditional_absolute_share": 0.7259555796424791,
+      "mechanism_relation": "opposing",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 0.00014405328876310465,
+        "observation_law_contribution": 0.00012954160570301026,
+        "conditional_aging_contribution": 4.857542978870456e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "transverse",
+      "model": "independent_AoD_AoA",
+      "observed_ports_k": 6,
+      "switch_time_us": 80,
+      "total_scan_time_us": 400,
+      "common_outage": 0.050601035823826405,
+      "common_minus_model": 0.005749147014951703,
+      "net_relative_error": 0.11361718038674247,
+      "internal_relative_mismatch": 0.11361718038674247,
+      "cancellation_index": 0.0,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "visible_error",
+        "10_percent": "visible_error"
+      },
+      "observation_law_contribution": 0.0006566706542152442,
+      "conditional_aging_contribution": 0.005092476360736458,
+      "conditional_absolute_share": 0.8857794638913472,
+      "mechanism_relation": "same_direction",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 0.0001479143599042949,
+        "observation_law_contribution": 0.00014044279745220088,
+        "conditional_aging_contribution": 2.9241863619167648e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "transverse",
+      "model": "fully_separable",
+      "observed_ports_k": 6,
+      "switch_time_us": 80,
+      "total_scan_time_us": 400,
+      "common_outage": 0.050601035823826405,
+      "common_minus_model": -0.0020538782546325202,
+      "net_relative_error": 0.04058964843690838,
+      "internal_relative_mismatch": 0.09988494695446506,
+      "cancellation_index": 0.5936359814516181,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "masked_low_net_error",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": 0.0015002017622356837,
+      "conditional_aging_contribution": -0.0035540800168682037,
+      "conditional_absolute_share": 0.7031820092741909,
+      "mechanism_relation": "opposing",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 0.00015862529743744899,
+        "observation_law_contribution": 0.00014290033667414413,
+        "conditional_aging_contribution": 5.2499032732997424e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "transverse",
+      "model": "independent_AoD_AoA",
+      "observed_ports_k": 6,
+      "switch_time_us": 90,
+      "total_scan_time_us": 450,
+      "common_outage": 0.0587161775287229,
+      "common_minus_model": 0.006330429698235375,
+      "net_relative_error": 0.10781406359667474,
+      "internal_relative_mismatch": 0.10781406359667473,
+      "cancellation_index": 0.0,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "visible_error",
+        "10_percent": "visible_error"
+      },
+      "observation_law_contribution": 0.0006164025367609115,
+      "conditional_aging_contribution": 0.005714027161474463,
+      "conditional_absolute_share": 0.9026286419494185,
+      "mechanism_relation": "same_direction",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 0.00012733541090989532,
+        "observation_law_contribution": 0.00011475224372028662,
+        "conditional_aging_contribution": 3.697622797316877e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "transverse",
+      "model": "fully_separable",
+      "observed_ports_k": 6,
+      "switch_time_us": 90,
+      "total_scan_time_us": 450,
+      "common_outage": 0.0587161775287229,
+      "common_minus_model": -0.0018362491532090148,
+      "net_relative_error": 0.0312733088306158,
+      "internal_relative_mismatch": 0.09846938650632361,
+      "cancellation_index": 0.6824057715784849,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "masked_low_net_error",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": 0.001972748413020357,
+      "conditional_aging_contribution": -0.0038089975662293717,
+      "conditional_absolute_share": 0.6587971142107576,
+      "mechanism_relation": "opposing",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 0.0001642468799615154,
+        "observation_law_contribution": 0.00014693098057345574,
+        "conditional_aging_contribution": 5.435151908286144e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "transverse",
+      "model": "independent_AoD_AoA",
+      "observed_ports_k": 6,
+      "switch_time_us": 100,
+      "total_scan_time_us": 500,
+      "common_outage": 0.06596766496870292,
+      "common_minus_model": 0.007080927041855531,
+      "net_relative_error": 0.10733936156774596,
+      "internal_relative_mismatch": 0.10733936156774594,
+      "cancellation_index": 0.0,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "visible_error",
+        "10_percent": "visible_error"
+      },
+      "observation_law_contribution": 0.0010462157737681531,
+      "conditional_aging_contribution": 0.006034711268087377,
+      "conditional_absolute_share": 0.8522487567540314,
+      "mechanism_relation": "same_direction",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 0.00017065830942164124,
+        "observation_law_contribution": 0.00016201661001995294,
+        "conditional_aging_contribution": 3.401934782449044e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "transverse",
+      "model": "fully_separable",
+      "observed_ports_k": 6,
+      "switch_time_us": 100,
+      "total_scan_time_us": 500,
+      "common_outage": 0.06596766496870292,
+      "common_minus_model": -0.0013044000009898454,
+      "net_relative_error": 0.019773323818702584,
+      "internal_relative_mismatch": 0.0985078047448453,
+      "cancellation_index": 0.7992715006702321,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "masked_low_net_error",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": 0.0025969649296102566,
+      "conditional_aging_contribution": -0.0039013649306001022,
+      "conditional_absolute_share": 0.600364249664884,
+      "mechanism_relation": "opposing",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 0.00017528286126413333,
+        "observation_law_contribution": 0.0001578018933805637,
+        "conditional_aging_contribution": 6.024549507809568e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "longitudinal",
+      "model": "independent_AoD_AoA",
+      "observed_ports_k": 6,
+      "switch_time_us": 0,
+      "total_scan_time_us": 0,
+      "common_outage": 0.05689179740017678,
+      "common_minus_model": -1.6642238421607146e-15,
+      "net_relative_error": 2.925243916015814e-14,
+      "internal_relative_mismatch": 2.925243916015815e-14,
+      "cancellation_index": 0.0,
+      "applicability_classes": {
+        "1_percent": "true_low_mismatch",
+        "5_percent": "true_low_mismatch",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": -8.954098161655277e-16,
+      "conditional_aging_contribution": -7.688140259951872e-16,
+      "conditional_absolute_share": 0.0,
+      "mechanism_relation": "identical",
+      "dominant_mechanism": "none",
+      "standard_errors": {
+        "total_common_minus_model": 6.3733566722528215e-18,
+        "observation_law_contribution": 5.487167295310116e-18,
+        "conditional_aging_contribution": 1.9306650809105955e-18
+      }
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "longitudinal",
+      "model": "fully_separable",
+      "observed_ports_k": 6,
+      "switch_time_us": 0,
+      "total_scan_time_us": 0,
+      "common_outage": 0.05689179740017678,
+      "common_minus_model": 5.100392614805857e-15,
+      "net_relative_error": 8.965075543192468e-14,
+      "internal_relative_mismatch": 8.965075543192468e-14,
+      "cancellation_index": 0.0,
+      "applicability_classes": {
+        "1_percent": "true_low_mismatch",
+        "5_percent": "true_low_mismatch",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": 2.360618943896253e-15,
+      "conditional_aging_contribution": 2.739773670909604e-15,
+      "conditional_absolute_share": 0.5371691706548931,
+      "mechanism_relation": "identical",
+      "dominant_mechanism": "none",
+      "standard_errors": {
+        "total_common_minus_model": 1.841643148875929e-17,
+        "observation_law_contribution": 1.0476664777007946e-17,
+        "conditional_aging_contribution": 1.1150595954160113e-17
+      }
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "longitudinal",
+      "model": "independent_AoD_AoA",
+      "observed_ports_k": 6,
+      "switch_time_us": 10,
+      "total_scan_time_us": 50,
+      "common_outage": 0.05725481046204037,
+      "common_minus_model": -0.00012940548364479457,
+      "net_relative_error": 0.002260167881100396,
+      "internal_relative_mismatch": 0.0024262878563446385,
+      "cancellation_index": 0.06846672162573209,
+      "applicability_classes": {
+        "1_percent": "true_low_mismatch",
+        "5_percent": "true_low_mismatch",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": -0.00013416106749307855,
+      "conditional_aging_contribution": 4.755583848283958e-06,
+      "conditional_absolute_share": 0.034233360812865925,
+      "mechanism_relation": "opposing",
+      "dominant_mechanism": "observation_selection",
+      "standard_errors": {
+        "total_common_minus_model": 1.0505172436203762e-05,
+        "observation_law_contribution": 1.0231128932499594e-05,
+        "conditional_aging_contribution": 2.706135993329336e-06
+      }
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "longitudinal",
+      "model": "fully_separable",
+      "observed_ports_k": 6,
+      "switch_time_us": 10,
+      "total_scan_time_us": 50,
+      "common_outage": 0.05725481046204037,
+      "common_minus_model": -8.797103106556239e-06,
+      "net_relative_error": 0.00015364827925487014,
+      "internal_relative_mismatch": 0.004942603068503183,
+      "cancellation_index": 0.9689134900931058,
+      "applicability_classes": {
+        "1_percent": "true_low_mismatch",
+        "5_percent": "true_low_mismatch",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": -0.00014589245249140253,
+      "conditional_aging_contribution": 0.00013709534938484628,
+      "conditional_absolute_share": 0.4844567450465528,
+      "mechanism_relation": "opposing",
+      "dominant_mechanism": "observation_selection",
+      "standard_errors": {
+        "total_common_minus_model": 1.4490468314010772e-05,
+        "observation_law_contribution": 1.3322195850499213e-05,
+        "conditional_aging_contribution": 5.778440851673603e-06
+      }
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "longitudinal",
+      "model": "independent_AoD_AoA",
+      "observed_ports_k": 6,
+      "switch_time_us": 20,
+      "total_scan_time_us": 100,
+      "common_outage": 0.05759027186252266,
+      "common_minus_model": -0.00038587280363153593,
+      "net_relative_error": 0.006700312242884997,
+      "internal_relative_mismatch": 0.006700312242884997,
+      "cancellation_index": 0.0,
+      "applicability_classes": {
+        "1_percent": "true_low_mismatch",
+        "5_percent": "true_low_mismatch",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": -0.0003017689146028648,
+      "conditional_aging_contribution": -8.410388902867112e-05,
+      "conditional_absolute_share": 0.217957545173307,
+      "mechanism_relation": "same_direction",
+      "dominant_mechanism": "observation_selection",
+      "standard_errors": {
+        "total_common_minus_model": 1.592026427899724e-05,
+        "observation_law_contribution": 1.5172860082452646e-05,
+        "conditional_aging_contribution": 5.34411650983969e-06
+      }
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "longitudinal",
+      "model": "fully_separable",
+      "observed_ports_k": 6,
+      "switch_time_us": 20,
+      "total_scan_time_us": 100,
+      "common_outage": 0.05759027186252266,
+      "common_minus_model": 4.4704472297705376e-07,
+      "net_relative_error": 7.76250412646466e-06,
+      "internal_relative_mismatch": 0.009641099199877233,
+      "cancellation_index": 0.9991948527895488,
+      "applicability_classes": {
+        "1_percent": "true_low_mismatch",
+        "5_percent": "true_low_mismatch",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": -0.0002773932396257513,
+      "conditional_aging_contribution": 0.00027784028434872833,
+      "conditional_absolute_share": 0.5004025736052256,
+      "mechanism_relation": "opposing",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 2.1492001073714573e-05,
+        "observation_law_contribution": 1.82711185593179e-05,
+        "conditional_aging_contribution": 1.1485824085849257e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "longitudinal",
+      "model": "independent_AoD_AoA",
+      "observed_ports_k": 6,
+      "switch_time_us": 30,
+      "total_scan_time_us": 150,
+      "common_outage": 0.05853410454413438,
+      "common_minus_model": -0.0007243671575790335,
+      "net_relative_error": 0.0123751300753711,
+      "internal_relative_mismatch": 0.012375130075371098,
+      "cancellation_index": 0.0,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "true_low_mismatch",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": -0.0004376117832711179,
+      "conditional_aging_contribution": -0.0002867553743079156,
+      "conditional_absolute_share": 0.3958702038152918,
+      "mechanism_relation": "same_direction",
+      "dominant_mechanism": "observation_selection",
+      "standard_errors": {
+        "total_common_minus_model": 2.1916681406441744e-05,
+        "observation_law_contribution": 2.0687347443730288e-05,
+        "conditional_aging_contribution": 7.951050532365724e-06
+      }
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "longitudinal",
+      "model": "fully_separable",
+      "observed_ports_k": 6,
+      "switch_time_us": 30,
+      "total_scan_time_us": 150,
+      "common_outage": 0.05853410454413438,
+      "common_minus_model": -1.741766251503111e-05,
+      "net_relative_error": 0.00029756434561834444,
+      "internal_relative_mismatch": 0.013818285777523472,
+      "cancellation_index": 0.978465900155115,
+      "applicability_classes": {
+        "1_percent": "masked_low_net_error",
+        "5_percent": "true_low_mismatch",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": -0.00041312932341865767,
+      "conditional_aging_contribution": 0.0003957116609036265,
+      "conditional_absolute_share": 0.48923295007755746,
+      "mechanism_relation": "opposing",
+      "dominant_mechanism": "observation_selection",
+      "standard_errors": {
+        "total_common_minus_model": 2.8950499451451075e-05,
+        "observation_law_contribution": 2.349297011970447e-05,
+        "conditional_aging_contribution": 1.715619399487737e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "longitudinal",
+      "model": "independent_AoD_AoA",
+      "observed_ports_k": 6,
+      "switch_time_us": 40,
+      "total_scan_time_us": 200,
+      "common_outage": 0.05939288494788318,
+      "common_minus_model": -0.0011242061868363608,
+      "net_relative_error": 0.01892829735115315,
+      "internal_relative_mismatch": 0.018928297351153152,
+      "cancellation_index": 2.220446049250313e-16,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "true_low_mismatch",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": -0.0005727460007133267,
+      "conditional_aging_contribution": -0.0005514601861230342,
+      "conditional_absolute_share": 0.4905329579041932,
+      "mechanism_relation": "same_direction",
+      "dominant_mechanism": "observation_selection",
+      "standard_errors": {
+        "total_common_minus_model": 2.739481860642808e-05,
+        "observation_law_contribution": 2.563332499603435e-05,
+        "conditional_aging_contribution": 1.057734667353591e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "longitudinal",
+      "model": "fully_separable",
+      "observed_ports_k": 6,
+      "switch_time_us": 40,
+      "total_scan_time_us": 200,
+      "common_outage": 0.05939288494788318,
+      "common_minus_model": -1.2700612447743822e-06,
+      "net_relative_error": 2.1384063863690937e-05,
+      "internal_relative_mismatch": 0.0187478593501826,
+      "cancellation_index": 0.9988593863723709,
+      "applicability_classes": {
+        "1_percent": "masked_low_net_error",
+        "5_percent": "true_low_mismatch",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": -0.0005573797573246327,
+      "conditional_aging_contribution": 0.0005561096960798583,
+      "conditional_absolute_share": 0.4994296931861854,
+      "mechanism_relation": "opposing",
+      "dominant_mechanism": "observation_selection",
+      "standard_errors": {
+        "total_common_minus_model": 0.00012263591693076036,
+        "observation_law_contribution": 0.00012153841821441327,
+        "conditional_aging_contribution": 1.6441669049823763e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "longitudinal",
+      "model": "independent_AoD_AoA",
+      "observed_ports_k": 6,
+      "switch_time_us": 50,
+      "total_scan_time_us": 250,
+      "common_outage": 0.0609426508113147,
+      "common_minus_model": -0.001716411497181002,
+      "net_relative_error": 0.028164372148746945,
+      "internal_relative_mismatch": 0.028164372148746942,
+      "cancellation_index": 0.0,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "true_low_mismatch",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": -0.0007482961992427237,
+      "conditional_aging_contribution": -0.000968115297938278,
+      "conditional_absolute_share": 0.5640344984453263,
+      "mechanism_relation": "same_direction",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 3.290762275708723e-05,
+        "observation_law_contribution": 3.057364772200897e-05,
+        "conditional_aging_contribution": 1.310762330841529e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "longitudinal",
+      "model": "fully_separable",
+      "observed_ports_k": 6,
+      "switch_time_us": 50,
+      "total_scan_time_us": 250,
+      "common_outage": 0.0609426508113147,
+      "common_minus_model": 0.00043957891125873203,
+      "net_relative_error": 0.007212992959884823,
+      "internal_relative_mismatch": 0.016388952881300725,
+      "cancellation_index": 0.5598868938042638,
+      "applicability_classes": {
+        "1_percent": "masked_low_net_error",
+        "5_percent": "true_low_mismatch",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": -0.000279603660674734,
+      "conditional_aging_contribution": 0.000719182571933466,
+      "conditional_absolute_share": 0.7200565530978681,
+      "mechanism_relation": "opposing",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 0.0001234832923565892,
+        "observation_law_contribution": 0.00012166481154507418,
+        "conditional_aging_contribution": 2.054984045618718e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "longitudinal",
+      "model": "independent_AoD_AoA",
+      "observed_ports_k": 6,
+      "switch_time_us": 60,
+      "total_scan_time_us": 300,
+      "common_outage": 0.06251792760436421,
+      "common_minus_model": -0.0023726441497660482,
+      "net_relative_error": 0.03795142034747198,
+      "internal_relative_mismatch": 0.03795142034747198,
+      "cancellation_index": 0.0,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "true_low_mismatch",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": -0.0008991518466537468,
+      "conditional_aging_contribution": -0.0014734923031123014,
+      "conditional_absolute_share": 0.6210338382422806,
+      "mechanism_relation": "same_direction",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 0.00010957160840411266,
+        "observation_law_contribution": 0.00010909414075031298,
+        "conditional_aging_contribution": 1.1443080810197638e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "longitudinal",
+      "model": "fully_separable",
+      "observed_ports_k": 6,
+      "switch_time_us": 60,
+      "total_scan_time_us": 300,
+      "common_outage": 0.06251792760436421,
+      "common_minus_model": 0.0002500583583883748,
+      "net_relative_error": 0.003999786428795808,
+      "internal_relative_mismatch": 0.02447321148221379,
+      "cancellation_index": 0.836564709470079,
+      "applicability_classes": {
+        "1_percent": "masked_low_net_error",
+        "5_percent": "true_low_mismatch",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": -0.000639978052651481,
+      "conditional_aging_contribution": 0.0008900364110398557,
+      "conditional_absolute_share": 0.5817176452649604,
+      "mechanism_relation": "opposing",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 0.00012546281632752924,
+        "observation_law_contribution": 0.00012306532527332406,
+        "conditional_aging_contribution": 2.4739538176963736e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "longitudinal",
+      "model": "independent_AoD_AoA",
+      "observed_ports_k": 6,
+      "switch_time_us": 70,
+      "total_scan_time_us": 350,
+      "common_outage": 0.06434741117315872,
+      "common_minus_model": -0.0031083755519048374,
+      "net_relative_error": 0.048306147756903645,
+      "internal_relative_mismatch": 0.04830614775690364,
+      "cancellation_index": 0.0,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "true_low_mismatch",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": -0.0010873347577246974,
+      "conditional_aging_contribution": -0.0020210407941801396,
+      "conditional_absolute_share": 0.6501919605375965,
+      "mechanism_relation": "same_direction",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 0.00011547157179347996,
+        "observation_law_contribution": 0.00011480810324914905,
+        "conditional_aging_contribution": 1.3497092190041464e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "longitudinal",
+      "model": "fully_separable",
+      "observed_ports_k": 6,
+      "switch_time_us": 70,
+      "total_scan_time_us": 350,
+      "common_outage": 0.06434741117315872,
+      "common_minus_model": 0.00032772353635851894,
+      "net_relative_error": 0.005093033742672503,
+      "internal_relative_mismatch": 0.028958357196746908,
+      "cancellation_index": 0.8241255984215625,
+      "applicability_classes": {
+        "1_percent": "masked_low_net_error",
+        "5_percent": "true_low_mismatch",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": -0.0007678358905398769,
+      "conditional_aging_contribution": 0.001095559426898396,
+      "conditional_absolute_share": 0.5879372007892189,
+      "mechanism_relation": "opposing",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 0.00012694806243455478,
+        "observation_law_contribution": 0.00012338304118792706,
+        "conditional_aging_contribution": 3.076751218295718e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "longitudinal",
+      "model": "independent_AoD_AoA",
+      "observed_ports_k": 6,
+      "switch_time_us": 80,
+      "total_scan_time_us": 400,
+      "common_outage": 0.06634759742970452,
+      "common_minus_model": -0.003831191021527231,
+      "net_relative_error": 0.057744231440880575,
+      "internal_relative_mismatch": 0.057744231440880575,
+      "cancellation_index": 0.0,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "visible_error",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": -0.0010969834113286967,
+      "conditional_aging_contribution": -0.0027342076101985343,
+      "conditional_absolute_share": 0.7136703951421861,
+      "mechanism_relation": "same_direction",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 0.0001356230392962581,
+        "observation_law_contribution": 0.0001346045236595143,
+        "conditional_aging_contribution": 1.6596515919193833e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "longitudinal",
+      "model": "fully_separable",
+      "observed_ports_k": 6,
+      "switch_time_us": 80,
+      "total_scan_time_us": 400,
+      "common_outage": 0.06634759742970452,
+      "common_minus_model": 0.00041093955561754685,
+      "net_relative_error": 0.0061937367973714285,
+      "internal_relative_mismatch": 0.03377306546327421,
+      "cancellation_index": 0.8166072071809214,
+      "applicability_classes": {
+        "1_percent": "masked_low_net_error",
+        "5_percent": "true_low_mismatch",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": -0.0009149110978534135,
+      "conditional_aging_contribution": 0.0013258506534709604,
+      "conditional_absolute_share": 0.5916963964095393,
+      "mechanism_relation": "opposing",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 9.408549941040983e-05,
+        "observation_law_contribution": 8.749757100954609e-05,
+        "conditional_aging_contribution": 3.5896236886202775e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "longitudinal",
+      "model": "independent_AoD_AoA",
+      "observed_ports_k": 6,
+      "switch_time_us": 90,
+      "total_scan_time_us": 450,
+      "common_outage": 0.06876328840989492,
+      "common_minus_model": -0.00477654403348459,
+      "net_relative_error": 0.06946357778894782,
+      "internal_relative_mismatch": 0.06946357778894784,
+      "cancellation_index": 2.220446049250313e-16,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "visible_error",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": -0.0012981275598787346,
+      "conditional_aging_contribution": -0.0034784164736058557,
+      "conditional_absolute_share": 0.7282287045239018,
+      "mechanism_relation": "same_direction",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 0.00014097983853633296,
+        "observation_law_contribution": 0.00013971091189128495,
+        "conditional_aging_contribution": 1.8678742759767862e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "longitudinal",
+      "model": "fully_separable",
+      "observed_ports_k": 6,
+      "switch_time_us": 90,
+      "total_scan_time_us": 450,
+      "common_outage": 0.06876328840989492,
+      "common_minus_model": 0.0007453212557849506,
+      "net_relative_error": 0.010838941432558077,
+      "internal_relative_mismatch": 0.03548576700278376,
+      "cancellation_index": 0.6945552443122396,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "true_low_mismatch",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": -0.0008473983875369009,
+      "conditional_aging_contribution": 0.0015927196433218513,
+      "conditional_absolute_share": 0.6527223778438802,
+      "mechanism_relation": "opposing",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 9.904962008796986e-05,
+        "observation_law_contribution": 9.073201517833542e-05,
+        "conditional_aging_contribution": 4.063114214350891e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "longitudinal",
+      "model": "independent_AoD_AoA",
+      "observed_ports_k": 6,
+      "switch_time_us": 100,
+      "total_scan_time_us": 500,
+      "common_outage": 0.0720654283069972,
+      "common_minus_model": -0.005676465252252001,
+      "net_relative_error": 0.07876821640565818,
+      "internal_relative_mismatch": 0.07876821640565818,
+      "cancellation_index": 0.0,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "visible_error",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": -0.0013471818722437827,
+      "conditional_aging_contribution": -0.004329283380008218,
+      "conditional_absolute_share": 0.7626724004503823,
+      "mechanism_relation": "same_direction",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 0.00014674045818940877,
+        "observation_law_contribution": 0.00014518808513703716,
+        "conditional_aging_contribution": 2.0858639493366745e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "longitudinal",
+      "model": "fully_separable",
+      "observed_ports_k": 6,
+      "switch_time_us": 100,
+      "total_scan_time_us": 500,
+      "common_outage": 0.0720654283069972,
+      "common_minus_model": 0.0009807326885984892,
+      "net_relative_error": 0.013608920555090418,
+      "internal_relative_mismatch": 0.03965508535560914,
+      "cancellation_index": 0.6568177717170022,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "true_low_mismatch",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": -0.0009385140110520079,
+      "conditional_aging_contribution": 0.0019192466996504971,
+      "conditional_absolute_share": 0.671591114141499,
+      "mechanism_relation": "opposing",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 0.00010432783697770425,
+        "observation_law_contribution": 9.407352925399057e-05,
+        "conditional_aging_contribution": 4.5518529218798525e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "transverse",
+      "model": "independent_AoD_AoA",
+      "observed_ports_k": 6,
+      "switch_time_us": 0,
+      "total_scan_time_us": 0,
+      "common_outage": 0.015088536679807413,
+      "common_minus_model": -5.160635698109557e-16,
+      "net_relative_error": 3.4202360425155726e-14,
+      "internal_relative_mismatch": 3.4202360425155726e-14,
+      "cancellation_index": 0.0,
+      "applicability_classes": {
+        "1_percent": "true_low_mismatch",
+        "5_percent": "true_low_mismatch",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": -4.480168907917975e-16,
+      "conditional_aging_contribution": -6.804667901915814e-17,
+      "conditional_absolute_share": 0.0,
+      "mechanism_relation": "identical",
+      "dominant_mechanism": "none",
+      "standard_errors": {
+        "total_common_minus_model": 1.824067622713626e-18,
+        "observation_law_contribution": 1.5259858665476835e-18,
+        "conditional_aging_contribution": 3.8596958474081824e-19
+      }
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "transverse",
+      "model": "fully_separable",
+      "observed_ports_k": 6,
+      "switch_time_us": 0,
+      "total_scan_time_us": 0,
+      "common_outage": 0.015088536679807413,
+      "common_minus_model": 1.00457201798312e-15,
+      "net_relative_error": 6.657849195724274e-14,
+      "internal_relative_mismatch": 6.657849195724273e-14,
+      "cancellation_index": 0.0,
+      "applicability_classes": {
+        "1_percent": "true_low_mismatch",
+        "5_percent": "true_low_mismatch",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": 6.612764633037396e-16,
+      "conditional_aging_contribution": 3.4329555467938024e-16,
+      "conditional_absolute_share": 0.0,
+      "mechanism_relation": "identical",
+      "dominant_mechanism": "none",
+      "standard_errors": {
+        "total_common_minus_model": 4.474505335579401e-18,
+        "observation_law_contribution": 2.6340692243585163e-18,
+        "conditional_aging_contribution": 1.9858022867474127e-18
+      }
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "transverse",
+      "model": "independent_AoD_AoA",
+      "observed_ports_k": 6,
+      "switch_time_us": 10,
+      "total_scan_time_us": 50,
+      "common_outage": 0.015460762578790999,
+      "common_minus_model": -1.76309676835228e-05,
+      "net_relative_error": 0.0011403685680878948,
+      "internal_relative_mismatch": 0.003868612080524547,
+      "cancellation_index": 0.7052254027151588,
+      "applicability_classes": {
+        "1_percent": "true_low_mismatch",
+        "5_percent": "true_low_mismatch",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": 2.1090362601454955e-05,
+      "conditional_aging_contribution": -3.872133028497775e-05,
+      "conditional_absolute_share": 0.6473872986424205,
+      "mechanism_relation": "opposing",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 3.077223471600416e-06,
+        "observation_law_contribution": 2.8108113588060613e-06,
+        "conditional_aging_contribution": 1.179312660057928e-06
+      }
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "transverse",
+      "model": "fully_separable",
+      "observed_ports_k": 6,
+      "switch_time_us": 10,
+      "total_scan_time_us": 50,
+      "common_outage": 0.015460762578790999,
+      "common_minus_model": -7.487498532865685e-06,
+      "net_relative_error": 0.00048429037666854804,
+      "internal_relative_mismatch": 0.0015269467744560257,
+      "cancellation_index": 0.6828374212054141,
+      "applicability_classes": {
+        "1_percent": "true_low_mismatch",
+        "5_percent": "true_low_mismatch",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": 8.06013150872483e-06,
+      "conditional_aging_contribution": -1.5547630041590512e-05,
+      "conditional_absolute_share": 0.6585812893972929,
+      "mechanism_relation": "opposing",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 4.36160464715262e-06,
+        "observation_law_contribution": 3.7622655090548294e-06,
+        "conditional_aging_contribution": 2.221038541687097e-06
+      }
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "transverse",
+      "model": "independent_AoD_AoA",
+      "observed_ports_k": 6,
+      "switch_time_us": 20,
+      "total_scan_time_us": 100,
+      "common_outage": 0.015576293497391711,
+      "common_minus_model": -7.751721986473025e-05,
+      "net_relative_error": 0.004976615256878069,
+      "internal_relative_mismatch": 0.010575399002139111,
+      "cancellation_index": 0.5294158399251473,
+      "applicability_classes": {
+        "1_percent": "masked_low_net_error",
+        "5_percent": "true_low_mismatch",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": 4.360414942230598e-05,
+      "conditional_aging_contribution": -0.00012112136928703623,
+      "conditional_absolute_share": 0.7352920800374264,
+      "mechanism_relation": "opposing",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 5.121528017936576e-06,
+        "observation_law_contribution": 4.4615872171674214e-06,
+        "conditional_aging_contribution": 2.420722186128746e-06
+      }
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "transverse",
+      "model": "fully_separable",
+      "observed_ports_k": 6,
+      "switch_time_us": 20,
+      "total_scan_time_us": 100,
+      "common_outage": 0.015576293497391711,
+      "common_minus_model": 1.7677593651392015e-05,
+      "net_relative_error": 0.0011349037339564879,
+      "internal_relative_mismatch": 0.008952034650021192,
+      "cancellation_index": 0.8732239341864253,
+      "applicability_classes": {
+        "1_percent": "true_low_mismatch",
+        "5_percent": "true_low_mismatch",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": 7.85585563794712e-05,
+      "conditional_aging_contribution": -6.088096272807918e-05,
+      "conditional_absolute_share": 0.4366119670932126,
+      "mechanism_relation": "opposing",
+      "dominant_mechanism": "observation_selection",
+      "standard_errors": {
+        "total_common_minus_model": 5.4956213662690514e-05,
+        "observation_law_contribution": 5.486587658583732e-05,
+        "conditional_aging_contribution": 3.1345340987048416e-06
+      }
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "transverse",
+      "model": "independent_AoD_AoA",
+      "observed_ports_k": 6,
+      "switch_time_us": 30,
+      "total_scan_time_us": 150,
+      "common_outage": 0.015905083373304343,
+      "common_minus_model": -0.00019483762173899444,
+      "net_relative_error": 0.012250022031699427,
+      "internal_relative_mismatch": 0.020485928136161485,
+      "cancellation_index": 0.4020274819730597,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "true_low_mismatch",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": 6.549638662308763e-05,
+      "conditional_aging_contribution": -0.00026033400836208205,
+      "conditional_absolute_share": 0.7989862590134701,
+      "mechanism_relation": "opposing",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 7.022018338056031e-06,
+        "observation_law_contribution": 5.883084893178641e-06,
+        "conditional_aging_contribution": 3.699948560990063e-06
+      }
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "transverse",
+      "model": "fully_separable",
+      "observed_ports_k": 6,
+      "switch_time_us": 30,
+      "total_scan_time_us": 150,
+      "common_outage": 0.015905083373304343,
+      "common_minus_model": -0.00010733165159360575,
+      "net_relative_error": 0.006748260859402662,
+      "internal_relative_mismatch": 0.006825265970609445,
+      "cancellation_index": 0.011282360502635091,
+      "applicability_classes": {
+        "1_percent": "true_low_mismatch",
+        "5_percent": "true_low_mismatch",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": 6.123863569572361e-07,
+      "conditional_aging_contribution": -0.00010794403795056298,
+      "conditional_absolute_share": 0.9943588197486823,
+      "mechanism_relation": "opposing",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 5.518848226746148e-05,
+        "observation_law_contribution": 5.4992167900109456e-05,
+        "conditional_aging_contribution": 4.752459315805437e-06
+      }
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "transverse",
+      "model": "independent_AoD_AoA",
+      "observed_ports_k": 6,
+      "switch_time_us": 40,
+      "total_scan_time_us": 200,
+      "common_outage": 0.01642990452120458,
+      "common_minus_model": -0.0003145396283083043,
+      "net_relative_error": 0.019144336955966883,
+      "internal_relative_mismatch": 0.03704344846669654,
+      "cancellation_index": 0.4831923660352959,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "true_low_mismatch",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": 0.00014704034656784113,
+      "conditional_aging_contribution": -0.0004615799748761454,
+      "conditional_absolute_share": 0.758403816982352,
+      "mechanism_relation": "opposing",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 5.906767084840136e-05,
+        "observation_law_contribution": 5.896179565302987e-05,
+        "conditional_aging_contribution": 3.8173106620167244e-06
+      }
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "transverse",
+      "model": "fully_separable",
+      "observed_ports_k": 6,
+      "switch_time_us": 40,
+      "total_scan_time_us": 200,
+      "common_outage": 0.01642990452120458,
+      "common_minus_model": -0.00019008261223231376,
+      "net_relative_error": 0.011569307173209158,
+      "internal_relative_mismatch": 0.01156930717320916,
+      "cancellation_index": 1.1102230246251565e-16,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "true_low_mismatch",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": -1.3028858013369377e-05,
+      "conditional_aging_contribution": -0.0001770537542189444,
+      "conditional_absolute_share": 0.9314568657261197,
+      "mechanism_relation": "same_direction",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 5.747806824867231e-05,
+        "observation_law_contribution": 5.70638087155479e-05,
+        "conditional_aging_contribution": 6.526774628684732e-06
+      }
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "transverse",
+      "model": "independent_AoD_AoA",
+      "observed_ports_k": 6,
+      "switch_time_us": 50,
+      "total_scan_time_us": 250,
+      "common_outage": 0.017061929371440052,
+      "common_minus_model": -0.0006974964260621357,
+      "net_relative_error": 0.04088027859438185,
+      "internal_relative_mismatch": 0.043167896887719416,
+      "cancellation_index": 0.052993508099032804,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "true_low_mismatch",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": 1.9515590874869878e-05,
+      "conditional_aging_contribution": -0.0007170120169370057,
+      "conditional_absolute_share": 0.9735032459504837,
+      "mechanism_relation": "opposing",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 6.104286233168966e-05,
+        "observation_law_contribution": 6.0852038660253777e-05,
+        "conditional_aging_contribution": 4.989187801234335e-06
+      }
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "transverse",
+      "model": "fully_separable",
+      "observed_ports_k": 6,
+      "switch_time_us": 50,
+      "total_scan_time_us": 250,
+      "common_outage": 0.017061929371440052,
+      "common_minus_model": -0.0001854208577182348,
+      "net_relative_error": 0.010867519943471963,
+      "internal_relative_mismatch": 0.021300761478223965,
+      "cancellation_index": 0.48980603559257896,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "true_low_mismatch",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": 8.900561509055671e-05,
+      "conditional_aging_contribution": -0.00027442647280879155,
+      "conditional_absolute_share": 0.7550969822037105,
+      "mechanism_relation": "opposing",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 5.838202477192682e-05,
+        "observation_law_contribution": 5.776592265910023e-05,
+        "conditional_aging_contribution": 8.276163361542794e-06
+      }
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "transverse",
+      "model": "independent_AoD_AoA",
+      "observed_ports_k": 6,
+      "switch_time_us": 60,
+      "total_scan_time_us": 300,
+      "common_outage": 0.01774994667953949,
+      "common_minus_model": -0.0009206296464189371,
+      "net_relative_error": 0.05186661475891387,
+      "internal_relative_mismatch": 0.0654635823484338,
+      "cancellation_index": 0.2077027730799893,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "visible_error",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": 0.00012067272485870264,
+      "conditional_aging_contribution": -0.00104130237127764,
+      "conditional_absolute_share": 0.8961486134600054,
+      "mechanism_relation": "opposing",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 1.4682325896545347e-05,
+        "observation_law_contribution": 1.2110987308388795e-05,
+        "conditional_aging_contribution": 8.409563082327066e-06
+      }
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "transverse",
+      "model": "fully_separable",
+      "observed_ports_k": 6,
+      "switch_time_us": 60,
+      "total_scan_time_us": 300,
+      "common_outage": 0.01774994667953949,
+      "common_minus_model": -0.0003175455686432675,
+      "net_relative_error": 0.01788994493202083,
+      "internal_relative_mismatch": 0.025800560443194863,
+      "cancellation_index": 0.3066063440207373,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "true_low_mismatch",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": 7.020650176283851e-05,
+      "conditional_aging_contribution": -0.000387752070406106,
+      "conditional_absolute_share": 0.8466968279896313,
+      "mechanism_relation": "opposing",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 5.8526248344710534e-05,
+        "observation_law_contribution": 5.7672644205048056e-05,
+        "conditional_aging_contribution": 9.945964385625526e-06
+      }
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "transverse",
+      "model": "independent_AoD_AoA",
+      "observed_ports_k": 6,
+      "switch_time_us": 70,
+      "total_scan_time_us": 350,
+      "common_outage": 0.01897617644260054,
+      "common_minus_model": -0.0012615603437208238,
+      "net_relative_error": 0.06648127179554916,
+      "internal_relative_mismatch": 0.08527244129529607,
+      "cancellation_index": 0.22036626622044986,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "visible_error",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": 0.00017829227399500548,
+      "conditional_aging_contribution": -0.0014398526177158292,
+      "conditional_absolute_share": 0.889816866889775,
+      "mechanism_relation": "opposing",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 1.815485205759566e-05,
+        "observation_law_contribution": 1.5164903207889066e-05,
+        "conditional_aging_contribution": 1.028212407376111e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "transverse",
+      "model": "fully_separable",
+      "observed_ports_k": 6,
+      "switch_time_us": 70,
+      "total_scan_time_us": 350,
+      "common_outage": 0.01897617644260054,
+      "common_minus_model": -0.0003514672431412658,
+      "net_relative_error": 0.01852149953413375,
+      "internal_relative_mismatch": 0.0334527119297878,
+      "cancellation_index": 0.4463378761934881,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "true_low_mismatch",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": 0.00014166866046093777,
+      "conditional_aging_contribution": -0.0004931359036022036,
+      "conditional_absolute_share": 0.776831061903256,
+      "mechanism_relation": "opposing",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 6.082857824807173e-05,
+        "observation_law_contribution": 5.967136931425595e-05,
+        "conditional_aging_contribution": 1.184871266896045e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "transverse",
+      "model": "independent_AoD_AoA",
+      "observed_ports_k": 6,
+      "switch_time_us": 80,
+      "total_scan_time_us": 400,
+      "common_outage": 0.019925190720914022,
+      "common_minus_model": -0.0015872404739024886,
+      "net_relative_error": 0.07965998901262601,
+      "internal_relative_mismatch": 0.10913714564294531,
+      "cancellation_index": 0.2700927943154864,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "visible_error",
+        "10_percent": "masked_low_net_error"
+      },
+      "observation_law_contribution": 0.00029366898388468376,
+      "conditional_aging_contribution": -0.0018809094577871724,
+      "conditional_absolute_share": 0.8649536028422569,
+      "mechanism_relation": "opposing",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 7.105866168469091e-05,
+        "observation_law_contribution": 7.048647762173848e-05,
+        "conditional_aging_contribution": 9.193415519716675e-06
+      }
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "transverse",
+      "model": "fully_separable",
+      "observed_ports_k": 6,
+      "switch_time_us": 80,
+      "total_scan_time_us": 400,
+      "common_outage": 0.019925190720914022,
+      "common_minus_model": -0.0003613822846562477,
+      "net_relative_error": 0.018136954858702106,
+      "internal_relative_mismatch": 0.04549274046833909,
+      "cancellation_index": 0.6013219983675283,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "true_low_mismatch",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": 0.0002725346227962261,
+      "conditional_aging_contribution": -0.0006339169074524738,
+      "conditional_absolute_share": 0.6993390008162359,
+      "mechanism_relation": "opposing",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 6.274034072424412e-05,
+        "observation_law_contribution": 6.111060285741647e-05,
+        "conditional_aging_contribution": 1.3655607645237288e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "transverse",
+      "model": "independent_AoD_AoA",
+      "observed_ports_k": 6,
+      "switch_time_us": 90,
+      "total_scan_time_us": 450,
+      "common_outage": 0.021256377537469198,
+      "common_minus_model": -0.002292143580885845,
+      "net_relative_error": 0.10783321743535186,
+      "internal_relative_mismatch": 0.12118032323280482,
+      "cancellation_index": 0.11014251688214483,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "visible_error",
+        "10_percent": "visible_error"
+      },
+      "observation_law_contribution": 0.00014185555993160228,
+      "conditional_aging_contribution": -0.002433999140817447,
+      "conditional_absolute_share": 0.9449287415589276,
+      "mechanism_relation": "opposing",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 7.598302050064058e-05,
+        "observation_law_contribution": 7.515165770948815e-05,
+        "conditional_aging_contribution": 1.0851734134018435e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "transverse",
+      "model": "fully_separable",
+      "observed_ports_k": 6,
+      "switch_time_us": 90,
+      "total_scan_time_us": 450,
+      "common_outage": 0.021256377537469198,
+      "common_minus_model": -0.0005273822459581079,
+      "net_relative_error": 0.024810541919876836,
+      "internal_relative_mismatch": 0.047942744158722767,
+      "cancellation_index": 0.48249641618891825,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "true_low_mismatch",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": 0.00024585341203099974,
+      "conditional_aging_contribution": -0.0007732356579891075,
+      "conditional_absolute_share": 0.7587517919055408,
+      "mechanism_relation": "opposing",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 6.524986558495117e-05,
+        "observation_law_contribution": 6.325984855907908e-05,
+        "conditional_aging_contribution": 1.5623868561811164e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "transverse",
+      "model": "independent_AoD_AoA",
+      "observed_ports_k": 6,
+      "switch_time_us": 100,
+      "total_scan_time_us": 500,
+      "common_outage": 0.02278864592829316,
+      "common_minus_model": -0.0028039902770224346,
+      "net_relative_error": 0.12304330348742444,
+      "internal_relative_mismatch": 0.1430059646476235,
+      "cancellation_index": 0.13959320654483487,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "visible_error",
+        "10_percent": "visible_error"
+      },
+      "observation_law_contribution": 0.00022746100848313326,
+      "conditional_aging_contribution": -0.0030314512855055676,
+      "conditional_absolute_share": 0.9302033967275825,
+      "mechanism_relation": "opposing",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 8.088417173727077e-05,
+        "observation_law_contribution": 7.985447932908377e-05,
+        "conditional_aging_contribution": 1.2449230239338454e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "transverse",
+      "model": "fully_separable",
+      "observed_ports_k": 6,
+      "switch_time_us": 100,
+      "total_scan_time_us": 500,
+      "common_outage": 0.02278864592829316,
+      "common_minus_model": -0.000670536230786557,
+      "net_relative_error": 0.02942413660278319,
+      "internal_relative_mismatch": 0.05552873096241401,
+      "cancellation_index": 0.470109687493135,
+      "applicability_classes": {
+        "1_percent": "visible_error",
+        "5_percent": "masked_low_net_error",
+        "10_percent": "true_low_mismatch"
+      },
+      "observation_law_contribution": 0.0002974441789816728,
+      "conditional_aging_contribution": -0.0009679804097682297,
+      "conditional_absolute_share": 0.7649451562534325,
+      "mechanism_relation": "opposing",
+      "dominant_mechanism": "conditional_aging",
+      "standard_errors": {
+        "total_common_minus_model": 6.816529949726235e-05,
+        "observation_law_contribution": 6.563888922608793e-05,
+        "conditional_aging_contribution": 1.7629504975046597e-05
+      }
+    }
+  ]
+}
