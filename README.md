@@ -29,6 +29,12 @@ python -m pip install -r requirements.txt
 
 ## Generate figures
 
+To recompute the main outage-decomposition results:
+
+```bash
+python code/literature_anchored_outage_decomposition.py
+```
+
 ```bash
 python code/plot_literature_anchored_outage_curves.py
 python code/plot_literature_anchored_applicability_map.py

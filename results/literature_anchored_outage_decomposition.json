@@ -1,0 +1,223 @@
+{
+  "protocol": "electronic_return_if_needed",
+  "protocol_definition": "The last observed port transmits at the final-pilot time; every other selected port transmits one switching interval later.",
+  "decomposition": "Shapley average of two replacement orders: observation distribution and conditional data-channel law.",
+  "rows": [
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "longitudinal",
+      "observed_ports_k": 6,
+      "scan_duration_us": 500.0,
+      "model": "TRD",
+      "sample_count": 2000000,
+      "hybrid_outage_probabilities": {
+        "common_y_common_conditional": 0.14455686463462533,
+        "common_y_model_conditional": 0.13180998596206203,
+        "model_y_common_conditional": 0.14253312437199794,
+        "model_y_model_conditional": 0.13074211346212872
+      },
+      "common_minus_model": 0.01381475117249661,
+      "observation_law_contribution": 0.001545806381280355,
+      "conditional_aging_contribution": 0.01226894479121626,
+      "decomposition_residual": -3.469446951953614e-18,
+      "absolute_contribution_shares": {
+        "observation_law": 0.11189534737027011,
+        "conditional_aging": 0.8881046526297299
+      },
+      "standard_errors": {
+        "total_common_minus_model": 0.0001334841871498663,
+        "observation_law_contribution": 0.00012678634070051363,
+        "conditional_aging_contribution": 2.889462710814923e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "longitudinal",
+      "observed_ports_k": 6,
+      "scan_duration_us": 500.0,
+      "model": "STS",
+      "sample_count": 2000000,
+      "hybrid_outage_probabilities": {
+        "common_y_common_conditional": 0.14441194363371565,
+        "common_y_model_conditional": 0.12658039258721934,
+        "model_y_common_conditional": 0.12681340581998854,
+        "model_y_model_conditional": 0.11956330463022509
+      },
+      "common_minus_model": 0.02484863900349057,
+      "observation_law_contribution": 0.01230781288536068,
+      "conditional_aging_contribution": 0.012540826118129891,
+      "decomposition_residual": 0.0,
+      "absolute_contribution_shares": {
+        "observation_law": 0.4953113481841706,
+        "conditional_aging": 0.5046886518158294
+      },
+      "standard_errors": {
+        "total_common_minus_model": 0.00015976569986978325,
+        "observation_law_contribution": 0.00012153598334252611,
+        "conditional_aging_contribution": 7.658391925954844e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "transverse",
+      "observed_ports_k": 6,
+      "scan_duration_us": 500.0,
+      "model": "TRD",
+      "sample_count": 2000000,
+      "hybrid_outage_probabilities": {
+        "common_y_common_conditional": 0.06569690368393742,
+        "common_y_model_conditional": 0.05934399618635899,
+        "model_y_common_conditional": 0.06460079670957278,
+        "model_y_model_conditional": 0.05896146392109309
+      },
+      "common_minus_model": 0.006735439762844326,
+      "observation_law_contribution": 0.0007393196198152691,
+      "conditional_aging_contribution": 0.005996120143029058,
+      "decomposition_residual": -8.673617379884035e-19,
+      "absolute_contribution_shares": {
+        "observation_law": 0.10976560489690429,
+        "conditional_aging": 0.8902343951030958
+      },
+      "standard_errors": {
+        "total_common_minus_model": 8.537974657024273e-05,
+        "observation_law_contribution": 8.10825688645605e-05,
+        "conditional_aging_contribution": 1.6961943700756448e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig8_same_direction",
+      "fas_orientation": "transverse",
+      "observed_ports_k": 6,
+      "scan_duration_us": 500.0,
+      "model": "STS",
+      "sample_count": 2000000,
+      "hybrid_outage_probabilities": {
+        "common_y_common_conditional": 0.06574470287113421,
+        "common_y_model_conditional": 0.06739628373579212,
+        "model_y_common_conditional": 0.06078789074677968,
+        "model_y_model_conditional": 0.06720311215160273
+      },
+      "common_minus_model": -0.0014584092804685014,
+      "observation_law_contribution": 0.0025749918542719743,
+      "conditional_aging_contribution": -0.0040334011347404755,
+      "decomposition_residual": 0.0,
+      "absolute_contribution_shares": {
+        "observation_law": 0.38965477061568915,
+        "conditional_aging": 0.6103452293843109
+      },
+      "standard_errors": {
+        "total_common_minus_model": 8.741277258059426e-05,
+        "observation_law_contribution": 7.870748438864854e-05,
+        "conditional_aging_contribution": 3.0030134442004572e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "longitudinal",
+      "observed_ports_k": 6,
+      "scan_duration_us": 500.0,
+      "model": "TRD",
+      "sample_count": 2000000,
+      "hybrid_outage_probabilities": {
+        "common_y_common_conditional": 0.07172106826796933,
+        "common_y_model_conditional": 0.07594002224926284,
+        "model_y_common_conditional": 0.07312935282025435,
+        "model_y_model_conditional": 0.07758385451518247
+      },
+      "common_minus_model": -0.00586278624721315,
+      "observation_law_contribution": -0.0015260584091023276,
+      "conditional_aging_contribution": -0.004336727838110822,
+      "decomposition_residual": 0.0,
+      "absolute_contribution_shares": {
+        "observation_law": 0.26029576122235953,
+        "conditional_aging": 0.7397042387776404
+      },
+      "standard_errors": {
+        "total_common_minus_model": 7.322591315524634e-05,
+        "observation_law_contribution": 7.244848708419715e-05,
+        "conditional_aging_contribution": 1.0471155305152716e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "longitudinal",
+      "observed_ports_k": 6,
+      "scan_duration_us": 500.0,
+      "model": "STS",
+      "sample_count": 2000000,
+      "hybrid_outage_probabilities": {
+        "common_y_common_conditional": 0.07181932356455858,
+        "common_y_model_conditional": 0.06992273843155454,
+        "model_y_common_conditional": 0.07288020922245293,
+        "model_y_model_conditional": 0.0708388693510938
+      },
+      "common_minus_model": 0.0009804542134647925,
+      "observation_law_contribution": -0.0009885082887168028,
+      "conditional_aging_contribution": 0.0019689625021815952,
+      "decomposition_residual": 0.0,
+      "absolute_contribution_shares": {
+        "observation_law": 0.3342410994417704,
+        "conditional_aging": 0.6657589005582296
+      },
+      "standard_errors": {
+        "total_common_minus_model": 5.20908149595836e-05,
+        "observation_law_contribution": 4.699308237716908e-05,
+        "conditional_aging_contribution": 2.2855784286101257e-05
+      }
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "transverse",
+      "observed_ports_k": 6,
+      "scan_duration_us": 500.0,
+      "model": "TRD",
+      "sample_count": 2000000,
+      "hybrid_outage_probabilities": {
+        "common_y_common_conditional": 0.02281074346727683,
+        "common_y_model_conditional": 0.025821942562129715,
+        "model_y_common_conditional": 0.022579389968091744,
+        "model_y_model_conditional": 0.025629677951652153
+      },
+      "common_minus_model": -0.0028189344843753223,
+      "observation_law_contribution": 0.00021180905483132427,
+      "conditional_aging_contribution": -0.003030743539206646,
+      "decomposition_residual": -4.336808689942018e-19,
+      "absolute_contribution_shares": {
+        "observation_law": 0.06532170217401383,
+        "conditional_aging": 0.9346782978259862
+      },
+      "standard_errors": {
+        "total_common_minus_model": 4.0559498280608075e-05,
+        "observation_law_contribution": 4.002897624682624e-05,
+        "conditional_aging_contribution": 6.247118179266717e-06
+      }
+    },
+    {
+      "scenario": "yoo_fig9_opposite_direction",
+      "fas_orientation": "transverse",
+      "observed_ports_k": 6,
+      "scan_duration_us": 500.0,
+      "model": "STS",
+      "sample_count": 2000000,
+      "hybrid_outage_probabilities": {
+        "common_y_common_conditional": 0.022840470780351126,
+        "common_y_model_conditional": 0.023613785916032734,
+        "model_y_common_conditional": 0.022329305774082105,
+        "model_y_model_conditional": 0.02344282622911615
+      },
+      "common_minus_model": -0.0006023554487650192,
+      "observation_law_contribution": 0.0003410623465928046,
+      "conditional_aging_contribution": -0.0009434177953578239,
+      "decomposition_residual": 0.0,
+      "absolute_contribution_shares": {
+        "observation_law": 0.2655255892666918,
+        "conditional_aging": 0.7344744107333081
+      },
+      "standard_errors": {
+        "total_common_minus_model": 3.416524784110904e-05,
+        "observation_law_contribution": 3.286096384213493e-05,
+        "conditional_aging_contribution": 8.790988688715164e-06
+      }
+    }
+  ]
+}
