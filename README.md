@@ -1,5 +1,7 @@
 # Sequential FAS Correlation-Model Comparison
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22829130.svg)](https://doi.org/10.5281/zenodo.22829130)
+
 This repository contains the code, parameters, saved numerical results, and
 figures for comparing three correlation models in a sequentially observed
 fluid antenna system (FAS):
