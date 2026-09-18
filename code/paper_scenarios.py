@@ -6,7 +6,7 @@ from dataclasses import dataclass
 
 import numpy as np
 
-from correlation_models import cross_covariance, separable_covariance
+from correlation_models import cross_covariance, space_time_separable_covariance
 from propagation_model import Geometry
 
 
@@ -89,29 +89,31 @@ def sample_coordinates(
 def model_covariances(
     stats: dict[str, np.ndarray | float], positions: np.ndarray, times: np.ndarray
 ) -> dict[str, np.ndarray]:
-    common = cross_covariance(
+    cs_covariance = cross_covariance(
         stats,
         WAVELENGTH_M,
         positions,
         times,
         positions,
         times,
-        independent=False,
+        tx_rx_decoupled=False,
     )
-    independent = cross_covariance(
+    trd_covariance = cross_covariance(
         stats,
         WAVELENGTH_M,
         positions,
         times,
         positions,
         times,
-        independent=True,
+        tx_rx_decoupled=True,
     )
-    separable = separable_covariance(stats, WAVELENGTH_M, positions, times)
+    sts_covariance = space_time_separable_covariance(
+        stats, WAVELENGTH_M, positions, times
+    )
     return {
-        "common_scatterer": common,
-        "independent_AoD_AoA": independent,
-        "fully_separable": separable,
+        "CS": cs_covariance,
+        "TRD": trd_covariance,
+        "STS": sts_covariance,
     }
 
 

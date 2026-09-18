@@ -7,29 +7,29 @@
     {
       "scenario": "yoo_fig8_same_direction",
       "fas_orientation": "longitudinal",
-      "common_scatterer_outage": 0.119979,
-      "independent_AoD_AoA_outage": 0.109012,
+      "CS_outage": 0.119979,
+      "TRD_outage": 0.109012,
       "relative_error_percent": 9.140766300769306
     },
     {
       "scenario": "yoo_fig8_same_direction",
       "fas_orientation": "transverse",
-      "common_scatterer_outage": 0.048128,
-      "independent_AoD_AoA_outage": 0.0423645,
+      "CS_outage": 0.048128,
+      "TRD_outage": 0.0423645,
       "relative_error_percent": 11.975357380319146
     },
     {
       "scenario": "yoo_fig9_opposite_direction",
       "fas_orientation": "longitudinal",
-      "common_scatterer_outage": 0.0660055,
-      "independent_AoD_AoA_outage": 0.0702335,
+      "CS_outage": 0.0660055,
+      "TRD_outage": 0.0702335,
       "relative_error_percent": 6.405526812159608
     },
     {
       "scenario": "yoo_fig9_opposite_direction",
       "fas_orientation": "transverse",
-      "common_scatterer_outage": 0.019647,
-      "independent_AoD_AoA_outage": 0.0212485,
+      "CS_outage": 0.019647,
+      "TRD_outage": 0.0212485,
       "relative_error_percent": 8.151371710693738
     }
   ]

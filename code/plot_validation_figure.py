@@ -42,9 +42,9 @@ CHUNK_SIZE = 200_000
 VALIDATION_DELAYS_US = (0.0, 50.0, 100.0)
 REFERENCE_DELAYS_US = (0.0, 20.0, 40.0, 60.0, 80.0, 100.0)
 VALIDATION_MODELS = (
-    "common_scatterer",
-    "independent_AoD_AoA",
-    "fully_separable",
+    "CS",
+    "TRD",
+    "STS",
 )
 
 
@@ -209,7 +209,7 @@ def build_panel_b() -> list[dict[str, object]]:
             OBSERVED_PORTS, delay_us * 1.0e-6
         )
         local_covariance = model_covariances(stats, positions, times)[
-            "common_scatterer"
+            "CS"
         ]
         exact_covariance = exact_path_covariance(
             stats,
@@ -246,7 +246,7 @@ def build_panel_b() -> list[dict[str, object]]:
                 "observed_ports_k": OBSERVED_PORTS,
                 "switch_delay_us": delay_us,
                 "exact_path_outage": exact_outage,
-                "local_common_scatterer_outage": local_outage,
+                "local_CS_outage": local_outage,
                 "absolute_difference": abs(exact_outage - local_outage),
             }
         )
@@ -324,7 +324,7 @@ def plot_figure(panel_a: list[dict[str, object]], panel_b: list[dict[str, object
 
     delays = np.asarray([row["switch_delay_us"] for row in panel_b])
     exact = np.asarray([row["exact_path_outage"] for row in panel_b])
-    local = np.asarray([row["local_common_scatterer_outage"] for row in panel_b])
+    local = np.asarray([row["local_CS_outage"] for row in panel_b])
     axes[1].plot(
         delays,
         local,
@@ -350,7 +350,10 @@ def plot_figure(panel_a: list[dict[str, object]], panel_b: list[dict[str, object
         "(b) Local-model validation",
         fontsize=10,
     )
-    axes[1].set_xlabel(r"Per-port switching delay $T_{\rm switch}$ ($\mu$s)", fontsize=8.5)
+    axes[1].set_xlabel(
+        r"Per-port switching delay $T_{\mathrm{switch}}$ ($\mu\mathrm{s}$)",
+        fontsize=8.5,
+    )
     axes[1].set_ylabel("Post-selection outage probability", fontsize=8.5)
     axes[1].set_xlim(float(delays.min()) - 3.0, float(delays.max()) + 3.0)
     y_min = float(min(exact.min(), local.min()))
@@ -372,8 +375,8 @@ def plot_figure(panel_a: list[dict[str, object]], panel_b: list[dict[str, object
         linewidth=1.0,
     )
     inset.set_title("Absolute outage difference", fontsize=8, pad=2.0)
-    inset.set_xlabel(r"$T_{\rm switch}$ ($\mu$s)", fontsize=7, labelpad=1.0)
-    inset.set_ylabel(r"$|\Delta P_{\rm out}|$", fontsize=7, labelpad=1.0)
+    inset.set_xlabel(r"$T_{\mathrm{switch}}$ ($\mu\mathrm{s}$)", fontsize=7, labelpad=1.0)
+    inset.set_ylabel(r"$|\Delta P_{\mathrm{out}}|$", fontsize=7, labelpad=1.0)
     inset.tick_params(labelsize=6.8, width=0.6, length=2.0)
     inset.grid(which="major", alpha=0.15, linewidth=0.5)
     inset.yaxis.set_major_formatter(ScalarFormatter(useMathText=True))

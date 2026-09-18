@@ -97,8 +97,8 @@ def main() -> None:
     payload = json.loads(source_path.read_text(encoding="utf-8"))
     rows = [row for row in payload["rows"] if row["switch_time_us"] > 0]
     models = (
-        ("independent_AoD_AoA", "Tx/Rx-Side Decoupled"),
-        ("fully_separable", "Fully space-time separable"),
+        ("TRD", "Tx/Rx-Side Decoupled (TRD)"),
+        ("STS", "Space-Time Separable (STS)"),
     )
     cases = {
         ("yoo_fig8_same_direction", "longitudinal"): (
@@ -150,7 +150,7 @@ def main() -> None:
     draw_model_points(
         inset_axis,
         rows,
-        "fully_separable",
+        "STS",
         cases,
         color_map,
         normalizer,

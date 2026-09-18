@@ -14,7 +14,10 @@ from pathlib import Path
 import numpy as np
 
 try:
-    from .correlation_models import cross_covariance, separable_covariance
+    from .correlation_models import (
+        cross_covariance,
+        space_time_separable_covariance,
+    )
     from .paper_scenarios import (
         SWITCH_TIME_S,
         WAVELENGTH_M,
@@ -26,7 +29,7 @@ try:
     )
     from .propagation_model import Geometry, direction_statistics
 except ImportError:
-    from correlation_models import cross_covariance, separable_covariance
+    from correlation_models import cross_covariance, space_time_separable_covariance
     from paper_scenarios import (
         SWITCH_TIME_S,
         WAVELENGTH_M,
@@ -161,7 +164,7 @@ def audit_case(scenario, angle_deg: float, observed_ports: int) -> dict[str, obj
         times,
         positions,
         times,
-        independent=False,
+        tx_rx_decoupled=False,
     )
     intermediate_common = cross_covariance(
         intermediate_stats,
@@ -170,13 +173,13 @@ def audit_case(scenario, angle_deg: float, observed_ports: int) -> dict[str, obj
         times,
         positions,
         times,
-        independent=False,
+        tx_rx_decoupled=False,
     )
 
     finite_path = exact_path_covariance(
         stats, tx, rx, velocity_tx, velocity_rx, axis, positions, times
     )
-    local_plane_wave = covariances["common_scatterer"]
+    local_plane_wave = covariances["CS"]
 
     spatial_only_times = np.zeros_like(times)
     common_spatial = cross_covariance(
@@ -186,18 +189,18 @@ def audit_case(scenario, angle_deg: float, observed_ports: int) -> dict[str, obj
         spatial_only_times,
         positions,
         spatial_only_times,
-        independent=False,
+        tx_rx_decoupled=False,
     )
-    independent_spatial = cross_covariance(
+    trd_spatial = cross_covariance(
         stats,
         WAVELENGTH_M,
         positions,
         spatial_only_times,
         positions,
         spatial_only_times,
-        independent=True,
+        tx_rx_decoupled=True,
     )
-    separable_spatial = separable_covariance(
+    sts_spatial = space_time_separable_covariance(
         stats, WAVELENGTH_M, positions, spatial_only_times
     )
 
@@ -209,9 +212,9 @@ def audit_case(scenario, angle_deg: float, observed_ports: int) -> dict[str, obj
         times,
         fixed_positions,
         times,
-        independent=False,
+        tx_rx_decoupled=False,
     )
-    separable_temporal = separable_covariance(
+    sts_temporal = space_time_separable_covariance(
         stats, WAVELENGTH_M, fixed_positions, times
     )
 
@@ -225,16 +228,16 @@ def audit_case(scenario, angle_deg: float, observed_ports: int) -> dict[str, obj
         times,
         positions,
         times,
-        independent=False,
+        tx_rx_decoupled=False,
     )
-    stationary_tx_independent = cross_covariance(
+    stationary_tx_trd = cross_covariance(
         stationary_tx_stats,
         WAVELENGTH_M,
         positions,
         times,
         positions,
         times,
-        independent=True,
+        tx_rx_decoupled=True,
     )
 
     los_error = None
@@ -265,17 +268,17 @@ def audit_case(scenario, angle_deg: float, observed_ports: int) -> dict[str, obj
             np.max(np.abs(intermediate_common - local_plane_wave))
         ),
         "los_local_linearization_max_error": los_error,
-        "zero_time_common_vs_independent_max_error": float(
-            np.max(np.abs(common_spatial - independent_spatial))
+        "zero_time_CS_vs_TRD_max_error": float(
+            np.max(np.abs(common_spatial - trd_spatial))
         ),
-        "zero_time_common_vs_separable_max_error": float(
-            np.max(np.abs(common_spatial - separable_spatial))
+        "zero_time_CS_vs_STS_max_error": float(
+            np.max(np.abs(common_spatial - sts_spatial))
         ),
-        "zero_displacement_common_vs_separable_max_error": float(
-            np.max(np.abs(common_temporal - separable_temporal))
+        "zero_displacement_CS_vs_STS_max_error": float(
+            np.max(np.abs(common_temporal - sts_temporal))
         ),
-        "stationary_tx_common_vs_independent_max_error": float(
-            np.max(np.abs(stationary_tx_common - stationary_tx_independent))
+        "stationary_tx_CS_vs_TRD_max_error": float(
+            np.max(np.abs(stationary_tx_common - stationary_tx_trd))
         ),
     }
 
@@ -358,9 +361,9 @@ def main() -> None:
         "audit_scope": {
             "propagation_reference": "Yoo et al., IEEE TWC 2018",
             "sequential_protocol_reference": "Dinis and Wichman, IEEE Communications Letters 2026",
-            "common_scatterer_status": "Yoo geometry with a local receive-port extension",
-            "independence_status": "matched-marginal AoD/AoA-independence ablation",
-            "separable_status": "matched-marginal space-time-separable ablation",
+            "CS_status": "Yoo geometry with a local receive-port extension",
+            "TRD_status": "matched-marginal Tx/Rx-side decoupling",
+            "STS_status": "matched-marginal space-time separability",
             "sample_scope": "the four six-port propagation and FAS-orientation cases used in the paper",
         },
         "isotropic_jakes_check": isotropic_jakes_check(),

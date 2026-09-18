@@ -261,10 +261,10 @@ def main() -> None:
                 times,
             )
             for model_index, model in enumerate(
-                ("independent_AoD_AoA", "fully_separable")
+                ("TRD", "STS")
             ):
                 result = decomposition(
-                    covariances["common_scatterer"],
+                    covariances["CS"],
                     covariances[model],
                     mean_channel,
                     observed_ports,

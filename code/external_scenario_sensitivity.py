@@ -106,10 +106,10 @@ def paired_monte_carlo(
     }
     outage_counts = {name: 0 for name in factors}
     paired_sum = {
-        name: 0.0 for name in factors if name != "common_scatterer"
+        name: 0.0 for name in factors if name != "CS"
     }
     paired_square_sum = {
-        name: 0.0 for name in factors if name != "common_scatterer"
+        name: 0.0 for name in factors if name != "CS"
     }
     rng = np.random.default_rng(seed)
     completed = 0
@@ -137,7 +137,7 @@ def paired_monte_carlo(
             )
             indicators[name] = indicator
             outage_counts[name] += int(np.sum(indicator))
-        common_indicator = indicators["common_scatterer"].astype(float)
+        common_indicator = indicators["CS"].astype(float)
         for name in paired_sum:
             difference = common_indicator - indicators[name].astype(float)
             paired_sum[name] += float(np.sum(difference))
@@ -148,7 +148,7 @@ def paired_monte_carlo(
         name: count / SAMPLE_COUNT for name, count in outage_counts.items()
     }
     comparisons = {}
-    common = probabilities["common_scatterer"]
+    common = probabilities["CS"]
     for name in paired_sum:
         difference = paired_sum[name] / SAMPLE_COUNT
         second_moment = paired_square_sum[name] / SAMPLE_COUNT
@@ -188,12 +188,12 @@ def main() -> None:
                     "rician_k": rician_k,
                     "outage_probability": result["outage_probability"],
                     "comparison_to_common": result["comparison_to_common"],
-                    "independent_relative_error_percent": 100.0
-                    * result["comparison_to_common"]["independent_AoD_AoA"][
+                    "TRD_relative_error_percent": 100.0
+                    * result["comparison_to_common"]["TRD"][
                         "relative_absolute_difference_to_common"
                     ],
-                    "separable_relative_error_percent": 100.0
-                    * result["comparison_to_common"]["fully_separable"][
+                    "STS_relative_error_percent": 100.0
+                    * result["comparison_to_common"]["STS"][
                         "relative_absolute_difference_to_common"
                     ],
                 }

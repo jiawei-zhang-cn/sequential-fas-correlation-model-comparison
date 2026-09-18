@@ -12,9 +12,9 @@ def cross_covariance(
     times_a: np.ndarray,
     positions_b: np.ndarray,
     times_b: np.ndarray,
-    independent: bool,
+    tx_rx_decoupled: bool,
 ) -> np.ndarray:
-    """Return the common-scatterer or AoD/AoA-independent covariance."""
+    """Return the CS or TRD covariance."""
     weights = np.asarray(stats["weights"])
     doppler_tx = np.asarray(stats["doppler_tx"])
     doppler_rx = np.asarray(stats["doppler_rx"])
@@ -24,7 +24,7 @@ def cross_covariance(
     time_difference = times_a[:, None] - times_b[None, :]
     position_difference = positions_a[:, None] - positions_b[None, :]
 
-    if not independent:
+    if not tx_rx_decoupled:
         phases = np.exp(
             1j
             * wave_number
@@ -53,13 +53,13 @@ def cross_covariance(
     )
 
 
-def separable_covariance(
+def space_time_separable_covariance(
     stats: dict[str, np.ndarray | float],
     wavelength: float,
     positions: np.ndarray,
     times: np.ndarray,
 ) -> np.ndarray:
-    """Build the product of matched spatial and temporal marginals."""
+    """Return the STS covariance from matched spatial and temporal marginals."""
     weights = np.asarray(stats["weights"])
     doppler_total = np.asarray(stats["doppler_total"])
     spatial_projection = np.asarray(stats["spatial_projection"])

@@ -78,8 +78,8 @@
     "exact_path_validation_delays_us": [0, 20, 40, 60, 80, 100]
   },
   "correlation_models": {
-    "common_scatterer": "The same scatterer jointly determines transmit direction, receive direction, Doppler, and FAS spatial phase.",
-    "independent_AoD_AoA": "The transmit-side and receive-side directional marginals are retained while their common-scatterer dependence is removed.",
-    "fully_separable": "The joint space-time correlation is replaced by the product of the common-scatterer spatial and temporal marginals."
+    "CS": "The same scatterer jointly determines transmit direction, receive direction, Doppler, and FAS spatial phase.",
+    "TRD": "The transmit-side and receive-side directional marginals are retained while their common-scatterer dependence is removed.",
+    "STS": "The joint space-time correlation is replaced by the product of the common-scatterer spatial and temporal marginals."
   }
 }

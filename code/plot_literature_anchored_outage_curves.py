@@ -44,16 +44,14 @@ def main() -> None:
 
     figure, axes = plt.subplots(2, 2, figsize=(7.1, 5.0), sharex=True)
     model_styles = {
-        "independent_AoD_AoA": ("Independent AoD/AoA", "#1f77b4", "o"),
-        "fully_separable": ("Fully space-time separable", "#d95f02", "s"),
+        "TRD": ("Tx/Rx-Side Decoupled (TRD)", "#1f77b4", "o"),
+        "STS": ("Space-Time Separable (STS)", "#d95f02", "s"),
     }
 
     for axis, (scenario, orientation, title) in zip(axes.ravel(), cases):
-        independent_rows = selected_rows(
-            rows, scenario, orientation, "independent_AoD_AoA"
-        )
-        delays = [float(row["switch_time_us"]) for row in independent_rows]
-        common_outages = [float(row["common_outage"]) for row in independent_rows]
+        trd_rows = selected_rows(rows, scenario, orientation, "TRD")
+        delays = [float(row["switch_time_us"]) for row in trd_rows]
+        common_outages = [float(row["common_outage"]) for row in trd_rows]
         axis.plot(
             delays,
             common_outages,
@@ -61,7 +59,7 @@ def main() -> None:
             marker="^",
             markersize=3.5,
             linewidth=1.6,
-            label="Common scatterer",
+            label="Common-Scatterer (CS)",
         )
         for model, (label, color, marker) in model_styles.items():
             model_rows = selected_rows(rows, scenario, orientation, model)
@@ -82,7 +80,7 @@ def main() -> None:
         axis.grid(which="major", alpha=0.16, linewidth=0.5)
 
     figure.supxlabel(
-        r"Per-port switching delay $T_{\rm switch}$ ($\mu$s)",
+        r"Per-port switching delay $T_{\mathrm{switch}}$ ($\mu\mathrm{s}$)",
         y=0.105,
     )
     figure.supylabel("Post-selection outage probability", x=0.02)

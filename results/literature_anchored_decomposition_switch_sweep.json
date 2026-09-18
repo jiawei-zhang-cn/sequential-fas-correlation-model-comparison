@@ -24,7 +24,7 @@
   },
   "classification_summaries": [
     {
-      "model": "independent_AoD_AoA",
+      "model": "TRD",
       "tolerance": 0.01,
       "positive_delay_point_count": 40,
       "class_counts": {
@@ -36,7 +36,7 @@
       "masked_cancellation_index_max": 0.5294158399251473
     },
     {
-      "model": "independent_AoD_AoA",
+      "model": "TRD",
       "tolerance": 0.05,
       "positive_delay_point_count": 40,
       "class_counts": {
@@ -48,7 +48,7 @@
       "masked_cancellation_index_max": null
     },
     {
-      "model": "independent_AoD_AoA",
+      "model": "TRD",
       "tolerance": 0.1,
       "positive_delay_point_count": 40,
       "class_counts": {
@@ -60,7 +60,7 @@
       "masked_cancellation_index_max": 0.2700927943154864
     },
     {
-      "model": "fully_separable",
+      "model": "STS",
       "tolerance": 0.01,
       "positive_delay_point_count": 40,
       "class_counts": {
@@ -72,7 +72,7 @@
       "masked_cancellation_index_max": 0.9988593863723709
     },
     {
-      "model": "fully_separable",
+      "model": "STS",
       "tolerance": 0.05,
       "positive_delay_point_count": 40,
       "class_counts": {
@@ -84,7 +84,7 @@
       "masked_cancellation_index_max": 0.951247449039166
     },
     {
-      "model": "fully_separable",
+      "model": "STS",
       "tolerance": 0.1,
       "positive_delay_point_count": 40,
       "class_counts": {
@@ -100,7 +100,7 @@
     {
       "scenario": "yoo_fig8_same_direction",
       "fas_orientation": "longitudinal",
-      "model": "independent_AoD_AoA",
+      "model": "TRD",
       "first_5_percent_switch_time_us": 50,
       "first_10_percent_switch_time_us": null,
       "conditional_dominant_positive_delay_points": 10,
@@ -120,7 +120,7 @@
     {
       "scenario": "yoo_fig8_same_direction",
       "fas_orientation": "longitudinal",
-      "model": "fully_separable",
+      "model": "STS",
       "first_5_percent_switch_time_us": 50,
       "first_10_percent_switch_time_us": 70,
       "conditional_dominant_positive_delay_points": 0,
@@ -140,7 +140,7 @@
     {
       "scenario": "yoo_fig8_same_direction",
       "fas_orientation": "transverse",
-      "model": "independent_AoD_AoA",
+      "model": "TRD",
       "first_5_percent_switch_time_us": 40,
       "first_10_percent_switch_time_us": 60,
       "conditional_dominant_positive_delay_points": 9,
@@ -160,7 +160,7 @@
     {
       "scenario": "yoo_fig8_same_direction",
       "fas_orientation": "transverse",
-      "model": "fully_separable",
+      "model": "STS",
       "first_5_percent_switch_time_us": 30,
       "first_10_percent_switch_time_us": null,
       "conditional_dominant_positive_delay_points": 10,
@@ -180,7 +180,7 @@
     {
       "scenario": "yoo_fig9_opposite_direction",
       "fas_orientation": "longitudinal",
-      "model": "independent_AoD_AoA",
+      "model": "TRD",
       "first_5_percent_switch_time_us": 80,
       "first_10_percent_switch_time_us": null,
       "conditional_dominant_positive_delay_points": 6,
@@ -200,7 +200,7 @@
     {
       "scenario": "yoo_fig9_opposite_direction",
       "fas_orientation": "longitudinal",
-      "model": "fully_separable",
+      "model": "STS",
       "first_5_percent_switch_time_us": null,
       "first_10_percent_switch_time_us": null,
       "conditional_dominant_positive_delay_points": 7,
@@ -220,7 +220,7 @@
     {
       "scenario": "yoo_fig9_opposite_direction",
       "fas_orientation": "transverse",
-      "model": "independent_AoD_AoA",
+      "model": "TRD",
       "first_5_percent_switch_time_us": 60,
       "first_10_percent_switch_time_us": 90,
       "conditional_dominant_positive_delay_points": 10,
@@ -240,7 +240,7 @@
     {
       "scenario": "yoo_fig9_opposite_direction",
       "fas_orientation": "transverse",
-      "model": "fully_separable",
+      "model": "STS",
       "first_5_percent_switch_time_us": null,
       "first_10_percent_switch_time_us": null,
       "conditional_dominant_positive_delay_points": 9,
@@ -262,7 +262,7 @@
     {
       "scenario": "yoo_fig8_same_direction",
       "fas_orientation": "longitudinal",
-      "model": "independent_AoD_AoA",
+      "model": "TRD",
       "observed_ports_k": 6,
       "switch_time_us": 0,
       "total_scan_time_us": 0,
@@ -290,7 +290,7 @@
     {
       "scenario": "yoo_fig8_same_direction",
       "fas_orientation": "longitudinal",
-      "model": "fully_separable",
+      "model": "STS",
       "observed_ports_k": 6,
       "switch_time_us": 0,
       "total_scan_time_us": 0,
@@ -318,7 +318,7 @@
     {
       "scenario": "yoo_fig8_same_direction",
       "fas_orientation": "longitudinal",
-      "model": "independent_AoD_AoA",
+      "model": "TRD",
       "observed_ports_k": 6,
       "switch_time_us": 10,
       "total_scan_time_us": 50,
@@ -346,7 +346,7 @@
     {
       "scenario": "yoo_fig8_same_direction",
       "fas_orientation": "longitudinal",
-      "model": "fully_separable",
+      "model": "STS",
       "observed_ports_k": 6,
       "switch_time_us": 10,
       "total_scan_time_us": 50,
@@ -374,7 +374,7 @@
     {
       "scenario": "yoo_fig8_same_direction",
       "fas_orientation": "longitudinal",
-      "model": "independent_AoD_AoA",
+      "model": "TRD",
       "observed_ports_k": 6,
       "switch_time_us": 20,
       "total_scan_time_us": 100,
@@ -402,7 +402,7 @@
     {
       "scenario": "yoo_fig8_same_direction",
       "fas_orientation": "longitudinal",
-      "model": "fully_separable",
+      "model": "STS",
       "observed_ports_k": 6,
       "switch_time_us": 20,
       "total_scan_time_us": 100,
@@ -430,7 +430,7 @@
     {
       "scenario": "yoo_fig8_same_direction",
       "fas_orientation": "longitudinal",
-      "model": "independent_AoD_AoA",
+      "model": "TRD",
       "observed_ports_k": 6,
       "switch_time_us": 30,
       "total_scan_time_us": 150,
@@ -458,7 +458,7 @@
     {
       "scenario": "yoo_fig8_same_direction",
       "fas_orientation": "longitudinal",
-      "model": "fully_separable",
+      "model": "STS",
       "observed_ports_k": 6,
       "switch_time_us": 30,
       "total_scan_time_us": 150,
@@ -486,7 +486,7 @@
     {
       "scenario": "yoo_fig8_same_direction",
       "fas_orientation": "longitudinal",
-      "model": "independent_AoD_AoA",
+      "model": "TRD",
       "observed_ports_k": 6,
       "switch_time_us": 40,
       "total_scan_time_us": 200,
@@ -514,7 +514,7 @@
     {
       "scenario": "yoo_fig8_same_direction",
       "fas_orientation": "longitudinal",
-      "model": "fully_separable",
+      "model": "STS",
       "observed_ports_k": 6,
       "switch_time_us": 40,
       "total_scan_time_us": 200,
@@ -542,7 +542,7 @@
     {
       "scenario": "yoo_fig8_same_direction",
       "fas_orientation": "longitudinal",
-      "model": "independent_AoD_AoA",
+      "model": "TRD",
       "observed_ports_k": 6,
       "switch_time_us": 50,
       "total_scan_time_us": 250,
@@ -570,7 +570,7 @@
     {
       "scenario": "yoo_fig8_same_direction",
       "fas_orientation": "longitudinal",
-      "model": "fully_separable",
+      "model": "STS",
       "observed_ports_k": 6,
       "switch_time_us": 50,
       "total_scan_time_us": 250,
@@ -598,7 +598,7 @@
     {
       "scenario": "yoo_fig8_same_direction",
       "fas_orientation": "longitudinal",
-      "model": "independent_AoD_AoA",
+      "model": "TRD",
       "observed_ports_k": 6,
       "switch_time_us": 60,
       "total_scan_time_us": 300,
@@ -626,7 +626,7 @@
     {
       "scenario": "yoo_fig8_same_direction",
       "fas_orientation": "longitudinal",
-      "model": "fully_separable",
+      "model": "STS",
       "observed_ports_k": 6,
       "switch_time_us": 60,
       "total_scan_time_us": 300,
@@ -654,7 +654,7 @@
     {
       "scenario": "yoo_fig8_same_direction",
       "fas_orientation": "longitudinal",
-      "model": "independent_AoD_AoA",
+      "model": "TRD",
       "observed_ports_k": 6,
       "switch_time_us": 70,
       "total_scan_time_us": 350,
@@ -682,7 +682,7 @@
     {
       "scenario": "yoo_fig8_same_direction",
       "fas_orientation": "longitudinal",
-      "model": "fully_separable",
+      "model": "STS",
       "observed_ports_k": 6,
       "switch_time_us": 70,
       "total_scan_time_us": 350,
@@ -710,7 +710,7 @@
     {
       "scenario": "yoo_fig8_same_direction",
       "fas_orientation": "longitudinal",
-      "model": "independent_AoD_AoA",
+      "model": "TRD",
       "observed_ports_k": 6,
       "switch_time_us": 80,
       "total_scan_time_us": 400,
@@ -738,7 +738,7 @@
     {
       "scenario": "yoo_fig8_same_direction",
       "fas_orientation": "longitudinal",
-      "model": "fully_separable",
+      "model": "STS",
       "observed_ports_k": 6,
       "switch_time_us": 80,
       "total_scan_time_us": 400,
@@ -766,7 +766,7 @@
     {
       "scenario": "yoo_fig8_same_direction",
       "fas_orientation": "longitudinal",
-      "model": "independent_AoD_AoA",
+      "model": "TRD",
       "observed_ports_k": 6,
       "switch_time_us": 90,
       "total_scan_time_us": 450,
@@ -794,7 +794,7 @@
     {
       "scenario": "yoo_fig8_same_direction",
       "fas_orientation": "longitudinal",
-      "model": "fully_separable",
+      "model": "STS",
       "observed_ports_k": 6,
       "switch_time_us": 90,
       "total_scan_time_us": 450,
@@ -822,7 +822,7 @@
     {
       "scenario": "yoo_fig8_same_direction",
       "fas_orientation": "longitudinal",
-      "model": "independent_AoD_AoA",
+      "model": "TRD",
       "observed_ports_k": 6,
       "switch_time_us": 100,
       "total_scan_time_us": 500,
@@ -850,7 +850,7 @@
     {
       "scenario": "yoo_fig8_same_direction",
       "fas_orientation": "longitudinal",
-      "model": "fully_separable",
+      "model": "STS",
       "observed_ports_k": 6,
       "switch_time_us": 100,
       "total_scan_time_us": 500,
@@ -878,7 +878,7 @@
     {
       "scenario": "yoo_fig8_same_direction",
       "fas_orientation": "transverse",
-      "model": "independent_AoD_AoA",
+      "model": "TRD",
       "observed_ports_k": 6,
       "switch_time_us": 0,
       "total_scan_time_us": 0,
@@ -906,7 +906,7 @@
     {
       "scenario": "yoo_fig8_same_direction",
       "fas_orientation": "transverse",
-      "model": "fully_separable",
+      "model": "STS",
       "observed_ports_k": 6,
       "switch_time_us": 0,
       "total_scan_time_us": 0,
@@ -934,7 +934,7 @@
     {
       "scenario": "yoo_fig8_same_direction",
       "fas_orientation": "transverse",
-      "model": "independent_AoD_AoA",
+      "model": "TRD",
       "observed_ports_k": 6,
       "switch_time_us": 10,
       "total_scan_time_us": 50,
@@ -962,7 +962,7 @@
     {
       "scenario": "yoo_fig8_same_direction",
       "fas_orientation": "transverse",
-      "model": "fully_separable",
+      "model": "STS",
       "observed_ports_k": 6,
       "switch_time_us": 10,
       "total_scan_time_us": 50,
@@ -990,7 +990,7 @@
     {
       "scenario": "yoo_fig8_same_direction",
       "fas_orientation": "transverse",
-      "model": "independent_AoD_AoA",
+      "model": "TRD",
       "observed_ports_k": 6,
       "switch_time_us": 20,
       "total_scan_time_us": 100,
@@ -1018,7 +1018,7 @@
     {
       "scenario": "yoo_fig8_same_direction",
       "fas_orientation": "transverse",
-      "model": "fully_separable",
+      "model": "STS",
       "observed_ports_k": 6,
       "switch_time_us": 20,
       "total_scan_time_us": 100,
@@ -1046,7 +1046,7 @@
     {
       "scenario": "yoo_fig8_same_direction",
       "fas_orientation": "transverse",
-      "model": "independent_AoD_AoA",
+      "model": "TRD",
       "observed_ports_k": 6,
       "switch_time_us": 30,
       "total_scan_time_us": 150,
@@ -1074,7 +1074,7 @@
     {
       "scenario": "yoo_fig8_same_direction",
       "fas_orientation": "transverse",
-      "model": "fully_separable",
+      "model": "STS",
       "observed_ports_k": 6,
       "switch_time_us": 30,
       "total_scan_time_us": 150,
@@ -1102,7 +1102,7 @@
     {
       "scenario": "yoo_fig8_same_direction",
       "fas_orientation": "transverse",
-      "model": "independent_AoD_AoA",
+      "model": "TRD",
       "observed_ports_k": 6,
       "switch_time_us": 40,
       "total_scan_time_us": 200,
@@ -1130,7 +1130,7 @@
     {
       "scenario": "yoo_fig8_same_direction",
       "fas_orientation": "transverse",
-      "model": "fully_separable",
+      "model": "STS",
       "observed_ports_k": 6,
       "switch_time_us": 40,
       "total_scan_time_us": 200,
@@ -1158,7 +1158,7 @@
     {
       "scenario": "yoo_fig8_same_direction",
       "fas_orientation": "transverse",
-      "model": "independent_AoD_AoA",
+      "model": "TRD",
       "observed_ports_k": 6,
       "switch_time_us": 50,
       "total_scan_time_us": 250,
@@ -1186,7 +1186,7 @@
     {
       "scenario": "yoo_fig8_same_direction",
       "fas_orientation": "transverse",
-      "model": "fully_separable",
+      "model": "STS",
       "observed_ports_k": 6,
       "switch_time_us": 50,
       "total_scan_time_us": 250,
@@ -1214,7 +1214,7 @@
     {
       "scenario": "yoo_fig8_same_direction",
       "fas_orientation": "transverse",
-      "model": "independent_AoD_AoA",
+      "model": "TRD",
       "observed_ports_k": 6,
       "switch_time_us": 60,
       "total_scan_time_us": 300,
@@ -1242,7 +1242,7 @@
     {
       "scenario": "yoo_fig8_same_direction",
       "fas_orientation": "transverse",
-      "model": "fully_separable",
+      "model": "STS",
       "observed_ports_k": 6,
       "switch_time_us": 60,
       "total_scan_time_us": 300,
@@ -1270,7 +1270,7 @@
     {
       "scenario": "yoo_fig8_same_direction",
       "fas_orientation": "transverse",
-      "model": "independent_AoD_AoA",
+      "model": "TRD",
       "observed_ports_k": 6,
       "switch_time_us": 70,
       "total_scan_time_us": 350,
@@ -1298,7 +1298,7 @@
     {
       "scenario": "yoo_fig8_same_direction",
       "fas_orientation": "transverse",
-      "model": "fully_separable",
+      "model": "STS",
       "observed_ports_k": 6,
       "switch_time_us": 70,
       "total_scan_time_us": 350,
@@ -1326,7 +1326,7 @@
     {
       "scenario": "yoo_fig8_same_direction",
       "fas_orientation": "transverse",
-      "model": "independent_AoD_AoA",
+      "model": "TRD",
       "observed_ports_k": 6,
       "switch_time_us": 80,
       "total_scan_time_us": 400,
@@ -1354,7 +1354,7 @@
     {
       "scenario": "yoo_fig8_same_direction",
       "fas_orientation": "transverse",
-      "model": "fully_separable",
+      "model": "STS",
       "observed_ports_k": 6,
       "switch_time_us": 80,
       "total_scan_time_us": 400,
@@ -1382,7 +1382,7 @@
     {
       "scenario": "yoo_fig8_same_direction",
       "fas_orientation": "transverse",
-      "model": "independent_AoD_AoA",
+      "model": "TRD",
       "observed_ports_k": 6,
       "switch_time_us": 90,
       "total_scan_time_us": 450,
@@ -1410,7 +1410,7 @@
     {
       "scenario": "yoo_fig8_same_direction",
       "fas_orientation": "transverse",
-      "model": "fully_separable",
+      "model": "STS",
       "observed_ports_k": 6,
       "switch_time_us": 90,
       "total_scan_time_us": 450,
@@ -1438,7 +1438,7 @@
     {
       "scenario": "yoo_fig8_same_direction",
       "fas_orientation": "transverse",
-      "model": "independent_AoD_AoA",
+      "model": "TRD",
       "observed_ports_k": 6,
       "switch_time_us": 100,
       "total_scan_time_us": 500,
@@ -1466,7 +1466,7 @@
     {
       "scenario": "yoo_fig8_same_direction",
       "fas_orientation": "transverse",
-      "model": "fully_separable",
+      "model": "STS",
       "observed_ports_k": 6,
       "switch_time_us": 100,
       "total_scan_time_us": 500,
@@ -1494,7 +1494,7 @@
     {
       "scenario": "yoo_fig9_opposite_direction",
       "fas_orientation": "longitudinal",
-      "model": "independent_AoD_AoA",
+      "model": "TRD",
       "observed_ports_k": 6,
       "switch_time_us": 0,
       "total_scan_time_us": 0,
@@ -1522,7 +1522,7 @@
     {
       "scenario": "yoo_fig9_opposite_direction",
       "fas_orientation": "longitudinal",
-      "model": "fully_separable",
+      "model": "STS",
       "observed_ports_k": 6,
       "switch_time_us": 0,
       "total_scan_time_us": 0,
@@ -1550,7 +1550,7 @@
     {
       "scenario": "yoo_fig9_opposite_direction",
       "fas_orientation": "longitudinal",
-      "model": "independent_AoD_AoA",
+      "model": "TRD",
       "observed_ports_k": 6,
       "switch_time_us": 10,
       "total_scan_time_us": 50,
@@ -1578,7 +1578,7 @@
     {
       "scenario": "yoo_fig9_opposite_direction",
       "fas_orientation": "longitudinal",
-      "model": "fully_separable",
+      "model": "STS",
       "observed_ports_k": 6,
       "switch_time_us": 10,
       "total_scan_time_us": 50,
@@ -1606,7 +1606,7 @@
     {
       "scenario": "yoo_fig9_opposite_direction",
       "fas_orientation": "longitudinal",
-      "model": "independent_AoD_AoA",
+      "model": "TRD",
       "observed_ports_k": 6,
       "switch_time_us": 20,
       "total_scan_time_us": 100,
@@ -1634,7 +1634,7 @@
     {
       "scenario": "yoo_fig9_opposite_direction",
       "fas_orientation": "longitudinal",
-      "model": "fully_separable",
+      "model": "STS",
       "observed_ports_k": 6,
       "switch_time_us": 20,
       "total_scan_time_us": 100,
@@ -1662,7 +1662,7 @@
     {
       "scenario": "yoo_fig9_opposite_direction",
       "fas_orientation": "longitudinal",
-      "model": "independent_AoD_AoA",
+      "model": "TRD",
       "observed_ports_k": 6,
       "switch_time_us": 30,
       "total_scan_time_us": 150,
@@ -1690,7 +1690,7 @@
     {
       "scenario": "yoo_fig9_opposite_direction",
       "fas_orientation": "longitudinal",
-      "model": "fully_separable",
+      "model": "STS",
       "observed_ports_k": 6,
       "switch_time_us": 30,
       "total_scan_time_us": 150,
@@ -1718,7 +1718,7 @@
     {
       "scenario": "yoo_fig9_opposite_direction",
       "fas_orientation": "longitudinal",
-      "model": "independent_AoD_AoA",
+      "model": "TRD",
       "observed_ports_k": 6,
       "switch_time_us": 40,
       "total_scan_time_us": 200,
@@ -1746,7 +1746,7 @@
     {
       "scenario": "yoo_fig9_opposite_direction",
       "fas_orientation": "longitudinal",
-      "model": "fully_separable",
+      "model": "STS",
       "observed_ports_k": 6,
       "switch_time_us": 40,
       "total_scan_time_us": 200,
@@ -1774,7 +1774,7 @@
     {
       "scenario": "yoo_fig9_opposite_direction",
       "fas_orientation": "longitudinal",
-      "model": "independent_AoD_AoA",
+      "model": "TRD",
       "observed_ports_k": 6,
       "switch_time_us": 50,
       "total_scan_time_us": 250,
@@ -1802,7 +1802,7 @@
     {
       "scenario": "yoo_fig9_opposite_direction",
       "fas_orientation": "longitudinal",
-      "model": "fully_separable",
+      "model": "STS",
       "observed_ports_k": 6,
       "switch_time_us": 50,
       "total_scan_time_us": 250,
@@ -1830,7 +1830,7 @@
     {
       "scenario": "yoo_fig9_opposite_direction",
       "fas_orientation": "longitudinal",
-      "model": "independent_AoD_AoA",
+      "model": "TRD",
       "observed_ports_k": 6,
       "switch_time_us": 60,
       "total_scan_time_us": 300,
@@ -1858,7 +1858,7 @@
     {
       "scenario": "yoo_fig9_opposite_direction",
       "fas_orientation": "longitudinal",
-      "model": "fully_separable",
+      "model": "STS",
       "observed_ports_k": 6,
       "switch_time_us": 60,
       "total_scan_time_us": 300,
@@ -1886,7 +1886,7 @@
     {
       "scenario": "yoo_fig9_opposite_direction",
       "fas_orientation": "longitudinal",
-      "model": "independent_AoD_AoA",
+      "model": "TRD",
       "observed_ports_k": 6,
       "switch_time_us": 70,
       "total_scan_time_us": 350,
@@ -1914,7 +1914,7 @@
     {
       "scenario": "yoo_fig9_opposite_direction",
       "fas_orientation": "longitudinal",
-      "model": "fully_separable",
+      "model": "STS",
       "observed_ports_k": 6,
       "switch_time_us": 70,
       "total_scan_time_us": 350,
@@ -1942,7 +1942,7 @@
     {
       "scenario": "yoo_fig9_opposite_direction",
       "fas_orientation": "longitudinal",
-      "model": "independent_AoD_AoA",
+      "model": "TRD",
       "observed_ports_k": 6,
       "switch_time_us": 80,
       "total_scan_time_us": 400,
@@ -1970,7 +1970,7 @@
     {
       "scenario": "yoo_fig9_opposite_direction",
       "fas_orientation": "longitudinal",
-      "model": "fully_separable",
+      "model": "STS",
       "observed_ports_k": 6,
       "switch_time_us": 80,
       "total_scan_time_us": 400,
@@ -1998,7 +1998,7 @@
     {
       "scenario": "yoo_fig9_opposite_direction",
       "fas_orientation": "longitudinal",
-      "model": "independent_AoD_AoA",
+      "model": "TRD",
       "observed_ports_k": 6,
       "switch_time_us": 90,
       "total_scan_time_us": 450,
@@ -2026,7 +2026,7 @@
     {
       "scenario": "yoo_fig9_opposite_direction",
       "fas_orientation": "longitudinal",
-      "model": "fully_separable",
+      "model": "STS",
       "observed_ports_k": 6,
       "switch_time_us": 90,
       "total_scan_time_us": 450,
@@ -2054,7 +2054,7 @@
     {
       "scenario": "yoo_fig9_opposite_direction",
       "fas_orientation": "longitudinal",
-      "model": "independent_AoD_AoA",
+      "model": "TRD",
       "observed_ports_k": 6,
       "switch_time_us": 100,
       "total_scan_time_us": 500,
@@ -2082,7 +2082,7 @@
     {
       "scenario": "yoo_fig9_opposite_direction",
       "fas_orientation": "longitudinal",
-      "model": "fully_separable",
+      "model": "STS",
       "observed_ports_k": 6,
       "switch_time_us": 100,
       "total_scan_time_us": 500,
@@ -2110,7 +2110,7 @@
     {
       "scenario": "yoo_fig9_opposite_direction",
       "fas_orientation": "transverse",
-      "model": "independent_AoD_AoA",
+      "model": "TRD",
       "observed_ports_k": 6,
       "switch_time_us": 0,
       "total_scan_time_us": 0,
@@ -2138,7 +2138,7 @@
     {
       "scenario": "yoo_fig9_opposite_direction",
       "fas_orientation": "transverse",
-      "model": "fully_separable",
+      "model": "STS",
       "observed_ports_k": 6,
       "switch_time_us": 0,
       "total_scan_time_us": 0,
@@ -2166,7 +2166,7 @@
     {
       "scenario": "yoo_fig9_opposite_direction",
       "fas_orientation": "transverse",
-      "model": "independent_AoD_AoA",
+      "model": "TRD",
       "observed_ports_k": 6,
       "switch_time_us": 10,
       "total_scan_time_us": 50,
@@ -2194,7 +2194,7 @@
     {
       "scenario": "yoo_fig9_opposite_direction",
       "fas_orientation": "transverse",
-      "model": "fully_separable",
+      "model": "STS",
       "observed_ports_k": 6,
       "switch_time_us": 10,
       "total_scan_time_us": 50,
@@ -2222,7 +2222,7 @@
     {
       "scenario": "yoo_fig9_opposite_direction",
       "fas_orientation": "transverse",
-      "model": "independent_AoD_AoA",
+      "model": "TRD",
       "observed_ports_k": 6,
       "switch_time_us": 20,
       "total_scan_time_us": 100,
@@ -2250,7 +2250,7 @@
     {
       "scenario": "yoo_fig9_opposite_direction",
       "fas_orientation": "transverse",
-      "model": "fully_separable",
+      "model": "STS",
       "observed_ports_k": 6,
       "switch_time_us": 20,
       "total_scan_time_us": 100,
@@ -2278,7 +2278,7 @@
     {
       "scenario": "yoo_fig9_opposite_direction",
       "fas_orientation": "transverse",
-      "model": "independent_AoD_AoA",
+      "model": "TRD",
       "observed_ports_k": 6,
       "switch_time_us": 30,
       "total_scan_time_us": 150,
@@ -2306,7 +2306,7 @@
     {
       "scenario": "yoo_fig9_opposite_direction",
       "fas_orientation": "transverse",
-      "model": "fully_separable",
+      "model": "STS",
       "observed_ports_k": 6,
       "switch_time_us": 30,
       "total_scan_time_us": 150,
@@ -2334,7 +2334,7 @@
     {
       "scenario": "yoo_fig9_opposite_direction",
       "fas_orientation": "transverse",
-      "model": "independent_AoD_AoA",
+      "model": "TRD",
       "observed_ports_k": 6,
       "switch_time_us": 40,
       "total_scan_time_us": 200,
@@ -2362,7 +2362,7 @@
     {
       "scenario": "yoo_fig9_opposite_direction",
       "fas_orientation": "transverse",
-      "model": "fully_separable",
+      "model": "STS",
       "observed_ports_k": 6,
       "switch_time_us": 40,
       "total_scan_time_us": 200,
@@ -2390,7 +2390,7 @@
     {
       "scenario": "yoo_fig9_opposite_direction",
       "fas_orientation": "transverse",
-      "model": "independent_AoD_AoA",
+      "model": "TRD",
       "observed_ports_k": 6,
       "switch_time_us": 50,
       "total_scan_time_us": 250,
@@ -2418,7 +2418,7 @@
     {
       "scenario": "yoo_fig9_opposite_direction",
       "fas_orientation": "transverse",
-      "model": "fully_separable",
+      "model": "STS",
       "observed_ports_k": 6,
       "switch_time_us": 50,
       "total_scan_time_us": 250,
@@ -2446,7 +2446,7 @@
     {
       "scenario": "yoo_fig9_opposite_direction",
       "fas_orientation": "transverse",
-      "model": "independent_AoD_AoA",
+      "model": "TRD",
       "observed_ports_k": 6,
       "switch_time_us": 60,
       "total_scan_time_us": 300,
@@ -2474,7 +2474,7 @@
     {
       "scenario": "yoo_fig9_opposite_direction",
       "fas_orientation": "transverse",
-      "model": "fully_separable",
+      "model": "STS",
       "observed_ports_k": 6,
       "switch_time_us": 60,
       "total_scan_time_us": 300,
@@ -2502,7 +2502,7 @@
     {
       "scenario": "yoo_fig9_opposite_direction",
       "fas_orientation": "transverse",
-      "model": "independent_AoD_AoA",
+      "model": "TRD",
       "observed_ports_k": 6,
       "switch_time_us": 70,
       "total_scan_time_us": 350,
@@ -2530,7 +2530,7 @@
     {
       "scenario": "yoo_fig9_opposite_direction",
       "fas_orientation": "transverse",
-      "model": "fully_separable",
+      "model": "STS",
       "observed_ports_k": 6,
       "switch_time_us": 70,
       "total_scan_time_us": 350,
@@ -2558,7 +2558,7 @@
     {
       "scenario": "yoo_fig9_opposite_direction",
       "fas_orientation": "transverse",
-      "model": "independent_AoD_AoA",
+      "model": "TRD",
       "observed_ports_k": 6,
       "switch_time_us": 80,
       "total_scan_time_us": 400,
@@ -2586,7 +2586,7 @@
     {
       "scenario": "yoo_fig9_opposite_direction",
       "fas_orientation": "transverse",
-      "model": "fully_separable",
+      "model": "STS",
       "observed_ports_k": 6,
       "switch_time_us": 80,
       "total_scan_time_us": 400,
@@ -2614,7 +2614,7 @@
     {
       "scenario": "yoo_fig9_opposite_direction",
       "fas_orientation": "transverse",
-      "model": "independent_AoD_AoA",
+      "model": "TRD",
       "observed_ports_k": 6,
       "switch_time_us": 90,
       "total_scan_time_us": 450,
@@ -2642,7 +2642,7 @@
     {
       "scenario": "yoo_fig9_opposite_direction",
       "fas_orientation": "transverse",
-      "model": "fully_separable",
+      "model": "STS",
       "observed_ports_k": 6,
       "switch_time_us": 90,
       "total_scan_time_us": 450,
@@ -2670,7 +2670,7 @@
     {
       "scenario": "yoo_fig9_opposite_direction",
       "fas_orientation": "transverse",
-      "model": "independent_AoD_AoA",
+      "model": "TRD",
       "observed_ports_k": 6,
       "switch_time_us": 100,
       "total_scan_time_us": 500,
@@ -2698,7 +2698,7 @@
     {
       "scenario": "yoo_fig9_opposite_direction",
       "fas_orientation": "transverse",
-      "model": "fully_separable",
+      "model": "STS",
       "observed_ports_k": 6,
       "switch_time_us": 100,
       "total_scan_time_us": 500,

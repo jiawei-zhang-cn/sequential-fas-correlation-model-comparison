@@ -75,7 +75,7 @@ def main() -> None:
     observed_ports = 6
     sample_count = 500_000
     switching_delays_us = tuple(range(0, 101, 10))
-    models = ("independent_AoD_AoA", "fully_separable")
+    models = ("TRD", "STS")
     rows: list[dict[str, object]] = []
 
     for scenario_index, scenario in enumerate(literature_scenarios()):
@@ -107,7 +107,7 @@ def main() -> None:
                 )
                 for model in models:
                     result = decomposition(
-                        covariances["common_scatterer"],
+                        covariances["CS"],
                         covariances[model],
                         mean_channel,
                         observed_ports,

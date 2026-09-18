@@ -30,7 +30,7 @@ CHUNK_SIZE = 200_000
 
 def paired_outage(
     common_covariance: np.ndarray,
-    independent_covariance: np.ndarray,
+    trd_covariance: np.ndarray,
     mean: np.ndarray,
     rician_k: float,
     seed: int,
@@ -38,9 +38,9 @@ def paired_outage(
     """Estimate both outage events with the same Gaussian samples and noise."""
     diffuse_scale = 1.0 / (rician_k + 1.0)
     factors = {
-        "common_scatterer": covariance_factor(diffuse_scale * common_covariance),
-        "independent_AoD_AoA": covariance_factor(
-            diffuse_scale * independent_covariance
+        "CS": covariance_factor(diffuse_scale * common_covariance),
+        "TRD": covariance_factor(
+            diffuse_scale * trd_covariance
         ),
     }
     outage_counts = {name: 0 for name in factors}
@@ -71,12 +71,12 @@ def paired_outage(
             )
         completed += size
 
-    common = outage_counts["common_scatterer"] / SAMPLE_COUNT
-    independent = outage_counts["independent_AoD_AoA"] / SAMPLE_COUNT
+    common = outage_counts["CS"] / SAMPLE_COUNT
+    trd = outage_counts["TRD"] / SAMPLE_COUNT
     return {
-        "common_scatterer_outage": common,
-        "independent_AoD_AoA_outage": independent,
-        "relative_error_percent": 100.0 * abs(independent - common) / common,
+        "CS_outage": common,
+        "TRD_outage": trd,
+        "relative_error_percent": 100.0 * abs(trd - common) / common,
     }
 
 
@@ -103,8 +103,8 @@ def main() -> None:
                         "longitudinal" if angle_deg == 0.0 else "transverse"
                     ),
                     **paired_outage(
-                        covariances["common_scatterer"],
-                        covariances["independent_AoD_AoA"],
+                        covariances["CS"],
+                        covariances["TRD"],
                         mean,
                         scenario.rician_k,
                         seed=(

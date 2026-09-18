@@ -4,9 +4,9 @@ This repository contains the code, parameters, saved numerical results, and
 figures for comparing three correlation models in a sequentially observed
 fluid antenna system (FAS):
 
-- Common-scatterer reference model
-- Tx/Rx-side decoupled model
-- Fully space-time separable model
+- Common-scatterer (CS) reference model
+- Tx/Rx-side decoupled (TRD) model
+- Space-time separable (STS) model
 
 ## Structure
 

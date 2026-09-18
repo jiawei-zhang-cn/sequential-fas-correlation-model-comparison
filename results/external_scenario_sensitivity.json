@@ -10,139 +10,139 @@
       "fas_orientation": "longitudinal",
       "rician_k": 0.0,
       "outage_probability": {
-        "common_scatterer": 0.242858,
-        "independent_AoD_AoA": 0.239525,
-        "fully_separable": 0.204567
+        "CS": 0.242858,
+        "TRD": 0.239525,
+        "STS": 0.204567
       },
       "comparison_to_common": {
-        "independent_AoD_AoA": {
+        "TRD": {
           "common_minus_model": 0.003333,
           "paired_standard_error": 0.0005626952026728147,
           "relative_absolute_difference_to_common": 0.013724069209167498
         },
-        "fully_separable": {
+        "STS": {
           "common_minus_model": 0.038291,
           "paired_standard_error": 0.0005327577304169316,
           "relative_absolute_difference_to_common": 0.1576682670531751
         }
       },
-      "independent_relative_error_percent": 1.3724069209167498,
-      "separable_relative_error_percent": 15.766826705317511
+      "TRD_relative_error_percent": 1.3724069209167498,
+      "STS_relative_error_percent": 15.766826705317511
     },
     {
       "fas_orientation": "longitudinal",
       "rician_k": 0.5,
       "outage_probability": {
-        "common_scatterer": 0.235378,
-        "independent_AoD_AoA": 0.227583,
-        "fully_separable": 0.218161
+        "CS": 0.235378,
+        "TRD": 0.227583,
+        "STS": 0.218161
       },
       "comparison_to_common": {
-        "independent_AoD_AoA": {
+        "TRD": {
           "common_minus_model": 0.007795,
           "paired_standard_error": 0.0006240642899373429,
           "relative_absolute_difference_to_common": 0.0331169438095319
         },
-        "fully_separable": {
+        "STS": {
           "common_minus_model": 0.017217,
           "paired_standard_error": 0.0005183151308914297,
           "relative_absolute_difference_to_common": 0.07314617338918675
         }
       },
-      "independent_relative_error_percent": 3.3116943809531905,
-      "separable_relative_error_percent": 7.314617338918675
+      "TRD_relative_error_percent": 3.3116943809531905,
+      "STS_relative_error_percent": 7.314617338918675
     },
     {
       "fas_orientation": "longitudinal",
       "rician_k": 1.0,
       "outage_probability": {
-        "common_scatterer": 0.211401,
-        "independent_AoD_AoA": 0.202537,
-        "fully_separable": 0.202451
+        "CS": 0.211401,
+        "TRD": 0.202537,
+        "STS": 0.202451
       },
       "comparison_to_common": {
-        "independent_AoD_AoA": {
+        "TRD": {
           "common_minus_model": 0.008864,
           "paired_standard_error": 0.0006140402507197716,
           "relative_absolute_difference_to_common": 0.04192979219587419
         },
-        "fully_separable": {
+        "STS": {
           "common_minus_model": 0.00895,
           "paired_standard_error": 0.0004926255144630656,
           "relative_absolute_difference_to_common": 0.042336602002828745
         }
       },
-      "independent_relative_error_percent": 4.19297921958742,
-      "separable_relative_error_percent": 4.233660200282874
+      "TRD_relative_error_percent": 4.19297921958742,
+      "STS_relative_error_percent": 4.233660200282874
     },
     {
       "fas_orientation": "transverse",
       "rician_k": 0.0,
       "outage_probability": {
-        "common_scatterer": 0.186647,
-        "independent_AoD_AoA": 0.184723,
-        "fully_separable": 0.176514
+        "CS": 0.186647,
+        "TRD": 0.184723,
+        "STS": 0.176514
       },
       "comparison_to_common": {
-        "independent_AoD_AoA": {
+        "TRD": {
           "common_minus_model": 0.001924,
           "paired_standard_error": 0.0005233147219637529,
           "relative_absolute_difference_to_common": 0.010308228902687962
         },
-        "fully_separable": {
+        "STS": {
           "common_minus_model": 0.010133,
           "paired_standard_error": 0.0005150168175030792,
           "relative_absolute_difference_to_common": 0.05428964837366793
         }
       },
-      "independent_relative_error_percent": 1.0308228902687961,
-      "separable_relative_error_percent": 5.428964837366793
+      "TRD_relative_error_percent": 1.0308228902687961,
+      "STS_relative_error_percent": 5.428964837366793
     },
     {
       "fas_orientation": "transverse",
       "rician_k": 0.5,
       "outage_probability": {
-        "common_scatterer": 0.209589,
-        "independent_AoD_AoA": 0.199638,
-        "fully_separable": 0.201889
+        "CS": 0.209589,
+        "TRD": 0.199638,
+        "STS": 0.201889
       },
       "comparison_to_common": {
-        "independent_AoD_AoA": {
+        "TRD": {
           "common_minus_model": 0.009951,
           "paired_standard_error": 0.0005361156382712596,
           "relative_absolute_difference_to_common": 0.04747863676051701
         },
-        "fully_separable": {
+        "STS": {
           "common_minus_model": 0.0077,
           "paired_standard_error": 0.000528309293880015,
           "relative_absolute_difference_to_common": 0.03673856929514431
         }
       },
-      "independent_relative_error_percent": 4.747863676051701,
-      "separable_relative_error_percent": 3.673856929514431
+      "TRD_relative_error_percent": 4.747863676051701,
+      "STS_relative_error_percent": 3.673856929514431
     },
     {
       "fas_orientation": "transverse",
       "rician_k": 1.0,
       "outage_probability": {
-        "common_scatterer": 0.199553,
-        "independent_AoD_AoA": 0.187496,
-        "fully_separable": 0.194241
+        "CS": 0.199553,
+        "TRD": 0.187496,
+        "STS": 0.194241
       },
       "comparison_to_common": {
-        "independent_AoD_AoA": {
+        "TRD": {
           "common_minus_model": 0.012057,
           "paired_standard_error": 0.0005191624300264802,
           "relative_absolute_difference_to_common": 0.060420038786688245
         },
-        "fully_separable": {
+        "STS": {
           "common_minus_model": 0.005312,
           "paired_standard_error": 0.0005095427191669017,
           "relative_absolute_difference_to_common": 0.026619494570364763
         }
       },
-      "independent_relative_error_percent": 6.042003878668824,
-      "separable_relative_error_percent": 2.661949457036476
+      "TRD_relative_error_percent": 6.042003878668824,
+      "STS_relative_error_percent": 2.661949457036476
     }
   ]
 }

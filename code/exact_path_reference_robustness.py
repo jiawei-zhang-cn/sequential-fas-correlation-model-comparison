@@ -86,7 +86,7 @@ def main_cases():
                 maximum_panel_size_m=10.0,
             )
             local_covariance = model_covariances(stats, positions, times)[
-                "common_scatterer"
+                "CS"
             ]
             finite_path_covariance = exact_path_covariance(
                 stats,
